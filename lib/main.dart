@@ -4,14 +4,14 @@ import 'package:georgiaonmydime/data/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/OpenStatus.dart';
 import 'package:georgiaonmydime/data/Weekday.dart';
-import 'package:georgiaonmydime/widgets/happyhour/HappyHourCard.dart';
+import 'package:georgiaonmydime/widgets/lists/HappyHourList.dart';
 import 'package:meta/meta.dart';
 
 void main() => runApp(new MyApp(
         items: new List<ListItem>.generate(
       1000,
       (i) => i % 6 == 0
-          ? new HeadingItem("Heading $i")
+          ? new HeadingItem("Monday")
           : new HappyHourItem(new HappyHour(
               Weekday.monday,
               "Torched Hop Brewing Company",
@@ -47,20 +47,7 @@ class MyApp extends StatelessWidget {
           title: new Text("Georgia On My Dime",
               style: new TextStyle(color: Colors.white)),
         ),
-        body: new ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              final item = items[index];
-
-              if (item is HeadingItem) {
-                return new ListTile(
-                  title: new Text(item.heading,
-                      style: Theme.of(context).textTheme.headline),
-                );
-              } else if (item is HappyHourItem) {
-                return new HappyHourCard(happyHour: item.happyHour);
-              }
-            }),
+        body: new HappyHourList(items: items),
       ),
     );
   }
