@@ -4,6 +4,7 @@ import 'package:georgiaonmydime/data/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/OpenStatus.dart';
 import 'package:georgiaonmydime/data/Weekday.dart';
+import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 import 'package:georgiaonmydime/widgets/lists/HappyHourList.dart';
 import 'package:meta/meta.dart';
 
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
               style: new TextStyle(color: Colors.white)),
         ),
         body: new HappyHourList(items: items),
+        bottomNavigationBar: new AppNavigationBar(),
       ),
     );
   }
