@@ -1,6 +1,6 @@
-// A ListItem that contains data to display a heading
+// Class to select filter on happy hour feed
 class Filter {
-  
+
   //open now
   final bool isOpen;
 

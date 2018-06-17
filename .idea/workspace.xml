@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f7e7bd6-5bb3-41e6-8b12-f8ba90fd907e" name="Default" comment="" />
+    <list default="true" id="7f7e7bd6-5bb3-41e6-8b12-f8ba90fd907e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/data/Filter.dart" afterPath="$PROJECT_DIR$/lib/data/Filter.dart" />
+    </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="Filter.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/data/Filter.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+            <state relative-caret-position="375">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -64,6 +66,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -82,6 +87,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -264,7 +270,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -303,14 +309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/data/HappyHour.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -319,10 +317,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/data/Filter.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
