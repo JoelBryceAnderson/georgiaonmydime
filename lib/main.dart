@@ -4,7 +4,7 @@ import 'package:georgiaonmydime/data/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/OpenStatus.dart';
 import 'package:georgiaonmydime/data/Weekday.dart';
-import 'package:georgiaonmydime/widgets/HappyHourCard.dart';
+import 'package:georgiaonmydime/widgets/happyhour/HappyHourCard.dart';
 import 'package:meta/meta.dart';
 
 void main() => runApp(new MyApp(

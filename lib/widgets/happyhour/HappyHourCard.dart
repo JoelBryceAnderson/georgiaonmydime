@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/HappyHour.dart';
+import 'package:georgiaonmydime/widgets/happyhour/OpenStatusText.dart';
 import 'package:meta/meta.dart';
 
 class HappyHourCard extends StatelessWidget {
@@ -38,8 +39,7 @@ class HappyHourCard extends StatelessWidget {
                   new Expanded(
                       child: new Text(happyHour.location,
                           style: Theme.of(context).textTheme.body1)),
-                  new Text(happyHour.openStatus.toString(),
-                      style: Theme.of(context).textTheme.body1)
+                  new OpenStatusText(status: happyHour.openStatus)
                 ]))
           ],
         ));
