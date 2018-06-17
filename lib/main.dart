@@ -46,11 +46,8 @@ class MyApp extends StatelessWidget {
       home: new Scaffold(
         appBar: new AppBar(
           backgroundColor: Colors.blueAccent,
-          title: new ImageIcon(
-              new AssetImage(
-                  "assets/gomd_title.png"),
-              size: 184.0,
-              color: Colors.white),
+          title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
+              size: 184.0, color: Colors.white),
         ),
         body: new HappyHourList(items: items),
         bottomNavigationBar: new AppNavigationBar(),
