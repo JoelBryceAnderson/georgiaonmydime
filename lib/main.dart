@@ -4,6 +4,7 @@ import 'package:georgiaonmydime/data/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/OpenStatus.dart';
 import 'package:georgiaonmydime/data/Weekday.dart';
+import 'package:georgiaonmydime/widgets/HappyHourCard.dart';
 import 'package:meta/meta.dart';
 
 void main() => runApp(new MyApp(
@@ -57,39 +58,7 @@ class MyApp extends StatelessWidget {
                       style: Theme.of(context).textTheme.headline),
                 );
               } else if (item is HappyHourItem) {
-                return new Card(
-                    elevation: 4.0,
-                    margin: new EdgeInsets.all(8.0),
-                    child: new Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        new Image.network(item.happyHour.imageUrl),
-                        new Container(
-                          margin: new EdgeInsets.only(
-                              top: 12.0, left: 12.0, right: 12.0, bottom: 24.0),
-                          child: new Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              new Text(item.happyHour.title,
-                                  style: Theme.of(context).textTheme.title),
-                              new Container(
-                                  margin: new EdgeInsets.only(top: 12.0),
-                                  child: new Text(item.happyHour.description,
-                                      style: Theme.of(context).textTheme.body1))
-                            ],
-                          ),
-                        ),
-                        new Divider(height: 4.0, color: Colors.grey),
-                        new Container(
-                            margin: new EdgeInsets.all(12.0),
-                            child: new Row(children: <Widget>[
-                              new Expanded(child: new Text(item.happyHour.location,
-                                  style: Theme.of(context).textTheme.body1)),
-                              new Text(item.happyHour.openStatus.toString(),
-                                  style: Theme.of(context).textTheme.body1)
-                            ]))
-                      ],
-                    ));
+                return new HappyHourCard(happyHour: item.happyHour);
               }
             }),
       ),
