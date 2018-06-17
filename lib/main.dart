@@ -19,8 +19,8 @@ void main() => runApp(new MyApp(
               "All Day: ​Every Tuesday the kitchen is whipping up 4 dollar sliders. The options include Pork Belly BLT, Super THC, Fried Avocado, and the SMCC Burger.",
               "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
               "Midtown",
-              OpenStatus.open,
-              false)),
+              i % 2 == 0 ? OpenStatus.open : OpenStatus.closed,
+              i % 2 == 0)),
     )));
 
 class MyApp extends StatelessWidget {

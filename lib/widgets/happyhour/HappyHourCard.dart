@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/HappyHour.dart';
+import 'package:georgiaonmydime/widgets/happyhour/BookmarkedIcon.dart';
 import 'package:georgiaonmydime/widgets/happyhour/OpenStatusText.dart';
 import 'package:meta/meta.dart';
 
@@ -23,8 +24,14 @@ class HappyHourCard extends StatelessWidget {
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  new Text(happyHour.title,
-                      style: Theme.of(context).textTheme.title),
+                  new Row(
+                    children: <Widget>[
+                      new Expanded(
+                          child: new Text(happyHour.title,
+                              style: Theme.of(context).textTheme.title)),
+                      new BookmarkedIcon(saved: happyHour.saved)
+                    ],
+                  ),
                   new Container(
                       margin: new EdgeInsets.only(top: 12.0),
                       child: new Text(happyHour.description,
