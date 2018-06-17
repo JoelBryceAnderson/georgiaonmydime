@@ -6,6 +6,7 @@ import 'package:georgiaonmydime/data/OpenStatus.dart';
 import 'package:georgiaonmydime/data/Weekday.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 import 'package:georgiaonmydime/widgets/lists/HappyHourList.dart';
+import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:meta/meta.dart';
 
 void main() => runApp(new MyApp(
@@ -45,10 +46,14 @@ class MyApp extends StatelessWidget {
       ),
       home: new Scaffold(
         appBar: new AppBar(
-          backgroundColor: Colors.blueAccent,
-          title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
-              size: 184.0, color: Colors.white),
-        ),
+            centerTitle: true,
+            backgroundColor: Colors.blueAccent,
+            title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
+                size: 184.0, color: Colors.white),
+            bottom: new PreferredSize(
+              child: new AppBarBottom(),
+              preferredSize: const Size.fromHeight(80.0),
+            )),
         body: new HappyHourList(items: items),
         bottomNavigationBar: new AppNavigationBar(),
       ),

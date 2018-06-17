@@ -10,7 +10,7 @@ class HappyHour {
   final String location;
   final OpenStatus openStatus;
 
-  final bool saved;
+  bool saved;
 
   HappyHour(this.day, this.title, this.description, this.imageUrl,
       this.location, this.openStatus, this.saved);

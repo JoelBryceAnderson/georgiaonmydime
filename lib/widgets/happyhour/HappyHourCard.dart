@@ -15,12 +15,12 @@ class HappyHourCard extends StatelessWidget {
         elevation: 4.0,
         margin: new EdgeInsets.all(8.0),
         child: new Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            new Image.network(happyHour.imageUrl),
+            new Image.network(happyHour.imageUrl,
+                height: 150.0, fit: BoxFit.fitWidth),
             new Container(
-              margin: new EdgeInsets.only(
-                  top: 12.0, left: 12.0, right: 12.0, bottom: 24.0),
+              margin: new EdgeInsets.only(top: 4.0, left: 12.0, bottom: 24.0),
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -29,11 +29,11 @@ class HappyHourCard extends StatelessWidget {
                       new Expanded(
                           child: new Text(happyHour.title,
                               style: Theme.of(context).textTheme.title)),
-                      new BookmarkedIcon(saved: happyHour.saved)
+                      new BookmarkedIcon(happyHour: happyHour)
                     ],
                   ),
                   new Container(
-                      margin: new EdgeInsets.only(top: 12.0),
+                      margin: new EdgeInsets.only(top: 4.0, right: 12.0),
                       child: new Text(happyHour.description,
                           style: Theme.of(context).textTheme.body1))
                 ],
