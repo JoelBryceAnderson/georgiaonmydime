@@ -50,9 +50,22 @@ class MyApp extends StatelessWidget {
                       style: Theme.of(context).textTheme.headline),
                 );
               } else if (item is HappyHourItem) {
-                return new ListTile(
-                    title: new Text(item.happyHour.title),
-                    subtitle: new Text(item.happyHour.description));
+                return new Card(
+                    elevation: 4.0,
+                    margin: new EdgeInsets.all(16.0),
+                    child: new Column(
+                      children: <Widget>[
+                        new Image.network(item.happyHour.imageUrl),
+                        new Text(item.happyHour.title,
+                            style: Theme.of(context).textTheme.title),
+                        new Text(item.happyHour.description,
+                            style: Theme.of(context).textTheme.body1),
+                        new Text(item.happyHour.location,
+                            style: Theme.of(context).textTheme.body1),
+                        new Text(item.happyHour.day.toString(),
+                            style: Theme.of(context).textTheme.body1)
+                      ],
+                    ));
               }
             }),
       ),
