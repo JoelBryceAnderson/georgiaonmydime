@@ -1,3 +1,4 @@
+import 'package:georgiaonmydime/data/Weekday.dart';
 // Class to select filter on happy hour feed
 class Filter {
 
@@ -19,8 +20,4 @@ class Filter {
 
 enum SortBy {
   mostViewed
-}
-
-enum Weekday {
-  monday, tuesday, wednesday, thursday, friday, saturday, sunday
 }

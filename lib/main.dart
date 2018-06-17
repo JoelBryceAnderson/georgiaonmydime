@@ -1,8 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:georgiaonmydime/data/HappyHour.dart';
+import 'package:georgiaonmydime/data/ListItem.dart';
+import 'package:georgiaonmydime/data/OpenStatus.dart';
+import 'package:georgiaonmydime/data/Weekday.dart';
+import 'package:meta/meta.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(new MyApp(
+        items: new List<ListItem>.generate(
+      1000,
+      (i) => i % 6 == 0
+          ? new HeadingItem("Heading $i")
+          : new HappyHourItem(new HappyHour(
+              Weekday.monday,
+              "Happy Hour $i",
+              "Description $i",
+              "https://i.imgur.com/TH0noM3.jpg",
+              "Buckhead",
+              OpenStatus.closed,
+              false)),
+    )));
 
 class MyApp extends StatelessWidget {
+  final List<ListItem> items;
+
+  MyApp({Key key, @required this.items}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -10,16 +32,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: new ThemeData(
         // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or press Run > Flutter Hot Reload in IntelliJ). Notice that the
-        // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'Georgia On My Dime'),
     );
   }
 }

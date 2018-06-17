@@ -1,14 +1,14 @@
-import 'package:georgiaonmydime/data/Filter.dart';
+import 'package:georgiaonmydime/data/OpenStatus.dart';
+import 'package:georgiaonmydime/data/Weekday.dart';
 
 // UI Object for HappyHour
 class HappyHour {
-
   final Weekday day;
   final String title;
   final String description;
   final String imageUrl;
   final String location;
-  final String openStatus;
+  final OpenStatus openStatus;
 
   final bool saved;
 
