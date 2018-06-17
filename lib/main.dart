@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Georgia On My Dime',
       theme: new ThemeData(
+        fontFamily: 'Quicksand',
         // This is the theme of your application.
         primarySwatch: Colors.grey,
       ),
