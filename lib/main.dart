@@ -45,8 +45,10 @@ class MyApp extends StatelessWidget {
       ),
       home: new Scaffold(
         appBar: new AppBar(
+          backgroundColor: Colors.white,
+          centerTitle: true,
           title: new Text("Georgia On My Dime",
-              style: new TextStyle(color: Colors.white)),
+              style: new TextStyle(color: Colors.blueGrey)),
         ),
         body: new HappyHourList(items: items),
         bottomNavigationBar: new AppNavigationBar(),
