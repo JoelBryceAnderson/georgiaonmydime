@@ -4,14 +4,12 @@ import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
 import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
-import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
-import 'package:georgiaonmydime/widgets/lists/HappyHourList.dart';
-import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
+import 'package:georgiaonmydime/widgets/screens/HappyHourScreen.dart';
 import 'package:meta/meta.dart';
 
 void main() => runApp(new MyApp(
         items: new List<ListItem>.generate(
-      1000,
+      50,
       (i) => i % 6 == 0
           ? new HeadingItem("Monday")
           : new HappyHourItem(new HappyHour(
@@ -38,25 +36,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     _setWindowProperties();
     return new MaterialApp(
-      title: 'Georgia On My Dime',
-      theme: new ThemeData(
-        fontFamily: 'Quicksand',
-        // This is the theme of your application.
-        primarySwatch: Colors.grey,
-      ),
-      home: new Scaffold(
-        appBar: new AppBar(
-            centerTitle: true,
-            backgroundColor: Colors.blueAccent,
-            title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
-                size: 184.0, color: Colors.white),
-            bottom: new PreferredSize(
-              child: new AppBarBottom(),
-              preferredSize: const Size.fromHeight(80.0),
-            )),
-        body: new HappyHourList(items: items),
-        bottomNavigationBar: new AppNavigationBar(),
-      ),
-    );
+        title: 'Georgia On My Dime',
+        theme: new ThemeData(
+          fontFamily: 'Quicksand',
+          // This is the theme of your application.
+          primarySwatch: Colors.grey,
+        ),
+        home: new HappyHourScreen(items: items));
   }
 }
