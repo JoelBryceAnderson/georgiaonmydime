@@ -3,8 +3,8 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/widgets/lists/NewsArticleList.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 
-class HappyHourScreen extends StatelessWidget {
-  const HappyHourScreen({Key key, this.items}) : super(key: key);
+class NewsScreen extends StatelessWidget {
+  const NewsScreen({Key key, this.items}) : super(key: key);
 
   final List<ListItem> items;
 
