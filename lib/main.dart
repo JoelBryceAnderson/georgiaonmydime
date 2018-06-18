@@ -4,6 +4,7 @@ import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
 import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
+import 'package:georgiaonmydime/data/news/NewsArticle.dart';
 import 'package:georgiaonmydime/widgets/screens/HappyHourScreen.dart';
 import 'package:meta/meta.dart';
 
@@ -29,6 +30,17 @@ class MyApp extends StatelessWidget {
 
   void _setWindowProperties() {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  }
+
+  List<ListItem> _generateNewsList() {
+    return new List<ListItem>.generate(
+      50,
+      (i) => new NewsArticleItem(new NewsArticle(
+          "Publico Kitchen & Tap Now Open in Midtown",
+          "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
+          "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
+          DateTime.now())),
+    );
   }
 
   // This widget is the root of your application.
