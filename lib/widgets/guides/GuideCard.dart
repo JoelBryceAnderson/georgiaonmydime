@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/guides/Guide.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GuideCard extends StatelessWidget {
   const GuideCard({Key key, this.guide}) : super(key: key);
 
   final Guide guide;
 
-  void _openLink() {}
+  void _openLink() {
+    launch(guide.articleUrl);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,7 @@ class GuideCard extends StatelessWidget {
             new Image.network(guide.imageUrl,
                 height: 150.0, fit: BoxFit.fitWidth),
             new Container(
-              margin: new EdgeInsets.only(top: 12.0, left: 12.0, bottom: 24.0),
+              margin: new EdgeInsets.only(top: 12.0, left: 12.0, bottom: 16.0),
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -36,7 +39,7 @@ class GuideCard extends StatelessWidget {
                 padding: new EdgeInsets.all(8.0),
                 onPressed: _openLink,
                 child:
-                new Text("Read More", style: new TextStyle(fontSize: 18.0)),
+                    new Text("Read More", style: new TextStyle(fontSize: 18.0)),
                 color: Colors.blueAccent,
                 textColor: Colors.white)
           ],

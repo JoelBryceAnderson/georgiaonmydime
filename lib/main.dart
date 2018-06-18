@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
 
   List<ListItem> _generateNewsList() {
     return new List<ListItem>.generate(
-      3,
+      1,
       (i) => new NewsArticleItem(new NewsArticle(
           "Publico Kitchen & Tap Now Open in Midtown",
           "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
 
   List<ListItem> _generateGuideList() {
     return new List<ListItem>.generate(
-      3,
+      1,
       (i) => new GuideItem(new Guide(
           "Best Bars to Watch Atlanta United Matches",
           "As we all know, being an Atlanta sports fan can be pretty depressing. After a heartbreaking Super Bowl loss for the Falcons followed by a Georgia Bulldawgs loss in the Nation Championship (played in Atlanta, of course), it seems like the ATL isn’t much of a football town. Lucky for us, there is a third football team that calls Georgia its home.",
