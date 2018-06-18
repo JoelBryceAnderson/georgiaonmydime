@@ -1,5 +1,5 @@
-import 'package:georgiaonmydime/data/OpenStatus.dart';
-import 'package:georgiaonmydime/data/Weekday.dart';
+import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
+import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
 
 // UI Object for HappyHour
 class HappyHour {

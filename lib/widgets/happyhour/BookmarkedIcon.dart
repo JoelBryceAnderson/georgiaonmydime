@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:georgiaonmydime/data/HappyHour.dart';
+import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 
 class BookmarkedIcon extends StatefulWidget {
   final HappyHour happyHour;

@@ -1,6 +1,6 @@
-import 'package:georgiaonmydime/data/Weekday.dart';
+import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
 // Class to select filter on happy hour feed
-class Filter {
+class HappyHourFilter {
 
   //open now
   final bool isOpen;
@@ -15,7 +15,7 @@ class Filter {
   final bool nearMe;
   final int distanceMiles;
 
-  Filter(this.isOpen, this.sortBy, this.weekday, this.nearMe, this.distanceMiles);
+  HappyHourFilter(this.isOpen, this.sortBy, this.weekday, this.nearMe, this.distanceMiles);
 }
 
 enum SortBy {

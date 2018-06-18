@@ -1,4 +1,4 @@
-import 'package:georgiaonmydime/data/HappyHour.dart';
+import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 
 // The base class for the different types of items the List can contain
 abstract class ListItem {}

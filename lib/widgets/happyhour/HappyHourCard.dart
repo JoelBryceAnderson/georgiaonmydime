@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:georgiaonmydime/data/HappyHour.dart';
+import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/widgets/happyhour/BookmarkedIcon.dart';
 import 'package:georgiaonmydime/widgets/happyhour/OpenStatusText.dart';
 import 'package:meta/meta.dart';

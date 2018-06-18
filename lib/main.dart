@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:georgiaonmydime/data/HappyHour.dart';
+import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/data/OpenStatus.dart';
-import 'package:georgiaonmydime/data/Weekday.dart';
+import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
+import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 import 'package:georgiaonmydime/widgets/lists/HappyHourList.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';

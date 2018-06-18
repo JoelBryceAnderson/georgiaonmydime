@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:georgiaonmydime/data/OpenStatus.dart';
+import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
 
 class OpenStatusText extends StatelessWidget {
   const OpenStatusText({Key key, this.status}) : super(key: key);
