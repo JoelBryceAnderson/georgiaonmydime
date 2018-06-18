@@ -1,63 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:georgiaonmydime/data/guides/Guide.dart';
-import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
-import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
-import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
-import 'package:georgiaonmydime/data/news/NewsArticle.dart';
+import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
+import 'package:georgiaonmydime/widgets/screens/GuideScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/HappyHourScreen.dart';
-import 'package:meta/meta.dart';
+import 'package:georgiaonmydime/widgets/screens/NewsScreen.dart';
 
-void main() => runApp(new MyApp(
-        items: new List<ListItem>.generate(
-      15,
-      (i) => i % 6 == 0
-          ? new HeadingItem("Monday")
-          : new HappyHourItem(new HappyHour(
-              Weekday.monday,
-              "Torched Hop Brewing Company",
-              "All Day: ​Every Tuesday the kitchen is whipping up 4 dollar sliders. The options include Pork Belly BLT, Super THC, Fried Avocado, and the SMCC Burger.",
-              "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
-              "Midtown",
-              i % 2 == 0 ? OpenStatus.open : OpenStatus.closed,
-              i % 2 == 0)),
-    )));
+void main() => runApp(new MainApp());
 
-class MyApp extends StatelessWidget {
-  MyApp({Key key, @required this.items}) : super(key: key);
+class MainApp extends StatefulWidget {
+  @override
+  _MainAppState createState() => new _MainAppState();
+}
 
-  final List<ListItem> items;
+class _MainAppState extends State<MainApp> {
+  PageController _pageController;
+  int _page = 0;
 
   void _setWindowProperties() {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   }
 
-  List<ListItem> _generateNewsList() {
-    return new List<ListItem>.generate(
-      1,
-      (i) => new NewsArticleItem(new NewsArticle(
-          "Publico Kitchen & Tap Now Open in Midtown",
-          "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
-          "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
-          "https://georgiaonmydime.com/publico-kitchen-tap-now-open-in-midtown/",
-          DateTime.now())),
-    );
+  BottomNavigationBarItem _generateNavItem(IconData icon, String title) {
+    return new BottomNavigationBarItem(
+        icon: new Icon(icon), title: new Text(title));
   }
 
-  List<ListItem> _generateGuideList() {
-    return new List<ListItem>.generate(
-      1,
-      (i) => new GuideItem(new Guide(
-          "Best Bars to Watch Atlanta United Matches",
-          "As we all know, being an Atlanta sports fan can be pretty depressing. After a heartbreaking Super Bowl loss for the Falcons followed by a Georgia Bulldawgs loss in the Nation Championship (played in Atlanta, of course), it seems like the ATL isn’t much of a football town. Lucky for us, there is a third football team that calls Georgia its home.",
-          "https://georgiaonmydime.com/wp-content/uploads/2018/03/atlanta-united-bars-372x240.jpg",
-          "https://georgiaonmydime.com/best-bars-to-watch-atlanta-united-matches/",
-          DateTime.now())),
-    );
-  }
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     _setWindowProperties();
@@ -68,7 +35,56 @@ class MyApp extends StatelessWidget {
           // This is the theme of your application.
           primarySwatch: Colors.grey,
         ),
-        home: new HappyHourScreen(
-            items: _generateGuideList() + _generateNewsList() + items));
+        home: new Scaffold(
+          appBar: new AppBar(
+              centerTitle: true,
+              backgroundColor: Colors.blueAccent,
+              title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
+                  size: 184.0, color: Colors.white),
+              bottom: new PreferredSize(
+                child: new AppBarBottom(),
+                preferredSize: const Size.fromHeight(80.0),
+              )),
+          body: new PageView(children: <Widget>[
+            new HappyHourScreen(),
+            new GuideScreen(),
+            new NewsScreen(),
+            new HappyHourScreen()
+          ], controller: _pageController, onPageChanged: onPageChanged),
+          bottomNavigationBar: new BottomNavigationBar(
+              currentIndex: _page,
+              items: [
+                _generateNavItem(Icons.local_bar, "Happy Hours"),
+                _generateNavItem(Icons.book, "Guides"),
+                _generateNavItem(Icons.library_books, "News"),
+                _generateNavItem(Icons.calendar_today, "Events")
+              ],
+              type: BottomNavigationBarType.fixed,
+              onTap: navigationTapped,
+              fixedColor: Colors.blueAccent),
+        ));
+  }
+
+  void onPageChanged(int page) {
+    setState(() {
+      _page = page;
+    });
+  }
+
+  void navigationTapped(int page) {
+    _pageController.animateToPage(page,
+        duration: const Duration(milliseconds: 300), curve: Curves.ease);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = new PageController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _pageController.dispose();
   }
 }

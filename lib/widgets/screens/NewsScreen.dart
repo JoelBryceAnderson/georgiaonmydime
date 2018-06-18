@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
+import 'package:georgiaonmydime/data/news/NewsArticle.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
-import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 
 class NewsScreen extends StatelessWidget {
   const NewsScreen({Key key, this.items}) : super(key: key);
 
   final List<ListItem> items;
 
+  static List<ListItem> _generateNewsList() {
+    return new List<ListItem>.generate(
+      15,
+          (i) => new NewsArticleItem(new NewsArticle(
+          "Publico Kitchen & Tap Now Open in Midtown",
+          "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
+          "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
+          "https://georgiaonmydime.com/publico-kitchen-tap-now-open-in-midtown/",
+          DateTime.now())),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.blueAccent,
-        title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
-            size: 184.0, color: Colors.white),
-      ),
-      body: new CardList(items: items),
-      bottomNavigationBar: new AppNavigationBar(),
-    );
+    return new CardList(items: _generateNewsList());
   }
 }
