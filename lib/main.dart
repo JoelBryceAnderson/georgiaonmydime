@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:georgiaonmydime/data/guides/Guide.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
@@ -10,7 +11,7 @@ import 'package:meta/meta.dart';
 
 void main() => runApp(new MyApp(
         items: new List<ListItem>.generate(
-      50,
+      15,
       (i) => i % 6 == 0
           ? new HeadingItem("Monday")
           : new HappyHourItem(new HappyHour(
@@ -34,8 +35,19 @@ class MyApp extends StatelessWidget {
 
   List<ListItem> _generateNewsList() {
     return new List<ListItem>.generate(
-      50,
+      3,
       (i) => new NewsArticleItem(new NewsArticle(
+          "Publico Kitchen & Tap Now Open in Midtown",
+          "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
+          "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
+          DateTime.now())),
+    );
+  }
+
+  List<ListItem> _generateGuideList() {
+    return new List<ListItem>.generate(
+      3,
+          (i) => new GuideItem(new Guide(
           "Publico Kitchen & Tap Now Open in Midtown",
           "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
           "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
@@ -54,6 +66,6 @@ class MyApp extends StatelessWidget {
           // This is the theme of your application.
           primarySwatch: Colors.grey,
         ),
-        home: new HappyHourScreen(items: items));
+        home: new HappyHourScreen(items: _generateGuideList() + _generateNewsList() + items));
   }
 }

@@ -1,3 +1,4 @@
+import 'package:georgiaonmydime/data/guides/Guide.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/data/news/NewsArticle.dart';
 
@@ -24,3 +25,8 @@ class NewsArticleItem implements ListItem {
   NewsArticleItem(this.newsArticle);
 }
 
+class GuideItem implements ListItem {
+  final Guide guide;
+
+  GuideItem(this.guide);
+}

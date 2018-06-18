@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
+import 'package:georgiaonmydime/widgets/guides/GuideCard.dart';
 import 'package:georgiaonmydime/widgets/happyhour/HappyHourCard.dart';
 import 'package:georgiaonmydime/widgets/news/NewsArticleCard.dart';
 
@@ -33,6 +34,8 @@ class _CardListState extends State<CardList> {
             return new NewsArticleCard(newsArticle: item.newsArticle);
           } else if (item is HappyHourItem) {
             return new HappyHourCard(happyHour: item.happyHour);
+          } else if (item is GuideItem) {
+            return new GuideCard(guide: item.guide);
           }
         });
   }
