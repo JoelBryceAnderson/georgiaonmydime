@@ -45,12 +45,16 @@ class _MainAppState extends State<MainApp> {
                 child: new AppBarBottom(),
                 preferredSize: const Size.fromHeight(80.0),
               )),
-          body: new PageView(children: <Widget>[
-            new HappyHourScreen(),
-            new GuideScreen(),
-            new NewsScreen(),
-            new HappyHourScreen()
-          ], controller: _pageController, onPageChanged: onPageChanged),
+          body: new PageView(
+              children: <Widget>[
+                new HappyHourScreen(),
+                new GuideScreen(),
+                new NewsScreen(),
+                new HappyHourScreen()
+              ],
+              controller: _pageController,
+              onPageChanged: onPageChanged,
+              physics: new NeverScrollableScrollPhysics()),
           bottomNavigationBar: new BottomNavigationBar(
               currentIndex: _page,
               items: [

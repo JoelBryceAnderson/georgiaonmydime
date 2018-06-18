@@ -15,7 +15,7 @@ class GuideCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Card(
         elevation: 4.0,
-        margin: new EdgeInsets.all(8.0),
+        margin: new EdgeInsets.only(left: 16.0, right: 16.0, top: 8.0, bottom: 8.0),
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
