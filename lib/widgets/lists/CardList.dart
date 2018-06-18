@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/widgets/happyhour/HappyHourCard.dart';
+import 'package:georgiaonmydime/widgets/news/NewsArticleCard.dart';
 
-class HappyHourList extends StatelessWidget {
-  const HappyHourList({Key key, this.items}) : super(key: key);
+class CardList extends StatefulWidget {
+  const CardList({Key key, this.items}) : super(key: key);
+
+  final List<ListItem> items;
+
+  @override
+  State<StatefulWidget> createState() => new _CardListState(items);
+}
+
+class _CardListState extends State<CardList> {
+  _CardListState(this.items);
 
   final List<ListItem> items;
 
@@ -19,6 +29,8 @@ class HappyHourList extends StatelessWidget {
               title: new Text(item.heading,
                   style: Theme.of(context).textTheme.headline),
             );
+          } else if (item is NewsArticleItem) {
+            return new NewsArticleCard(newsArticle: item.newsArticle);
           } else if (item is HappyHourItem) {
             return new HappyHourCard(happyHour: item.happyHour);
           }

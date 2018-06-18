@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/widgets/lists/NewsArticleList.dart';
+import 'package:georgiaonmydime/widgets/lists/CardList.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 
 class NewsScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class NewsScreen extends StatelessWidget {
         title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
             size: 184.0, color: Colors.white),
       ),
-      body: new NewsArticleList(items: items),
+      body: new CardList(items: items),
       bottomNavigationBar: new AppNavigationBar(),
     );
   }

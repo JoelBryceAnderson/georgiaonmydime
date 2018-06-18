@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/widgets/lists/HappyHourList.dart';
+import 'package:georgiaonmydime/widgets/lists/CardList.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 
@@ -21,7 +21,7 @@ class HappyHourScreen extends StatelessWidget {
             child: new AppBarBottom(),
             preferredSize: const Size.fromHeight(80.0),
           )),
-      body: new HappyHourList(items: items),
+      body: new CardList(items: items),
       bottomNavigationBar: new AppNavigationBar(),
     );
   }
