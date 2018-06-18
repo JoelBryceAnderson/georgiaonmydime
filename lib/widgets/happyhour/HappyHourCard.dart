@@ -43,6 +43,9 @@ class HappyHourCard extends StatelessWidget {
             new Container(
                 margin: new EdgeInsets.all(12.0),
                 child: new Row(children: <Widget>[
+                  new Container(
+                      margin: new EdgeInsets.only(right: 4.0),
+                      child: new Icon(Icons.place, color: Colors.black45, size: 16.0,)),
                   new Expanded(
                       child: new Text(happyHour.location,
                           style: Theme.of(context).textTheme.body1)),
