@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/widgets/lists/CardList.dart';
+import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppNavigationBar.dart';
 
 class NewsScreen extends StatelessWidget {
