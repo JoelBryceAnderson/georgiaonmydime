@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
+import 'package:georgiaonmydime/widgets/screens/EventsScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/GuideScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/HappyHourScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/NewsScreen.dart';
@@ -41,7 +42,7 @@ class _MainAppState extends State<MainApp> {
           new HappyHourScreen(),
           new GuideScreen(),
           new NewsScreen(),
-          new HappyHourScreen()
+          new EventsScreen()
         ],
         controller: _pageController,
         onPageChanged: _onPageChanged,
