@@ -26,8 +26,8 @@ class GuideScreen extends StatelessWidget {
       new SliverAppBar(
           floating: true,
           backgroundColor: Colors.blueAccent,
-          title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
-              size: 184.0, color: Colors.white)),
+          title: new Text("Guides",
+              style: new TextStyle(color: Colors.white, fontSize: 24.0))),
       CardList(items: _generateMocksList())
     ]);
   }
