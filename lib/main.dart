@@ -16,18 +16,12 @@ class _MainAppState extends State<MainApp> {
   PageController _pageController;
   int _page = 0;
 
-  void _setWindowProperties() {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  }
-
   @override
   Widget build(BuildContext context) {
-    _setWindowProperties();
     return new MaterialApp(
         title: 'Georgia On My Dime',
         theme: _appTheme(),
         home: new Scaffold(
-          appBar: _buildAppBar(),
           body: _buildPageView(),
           bottomNavigationBar: _buildBottomBar(),
         ));
@@ -39,18 +33,6 @@ class _MainAppState extends State<MainApp> {
       // This is the theme of your application.
       primarySwatch: Colors.grey,
     );
-  }
-
-  Widget _buildAppBar() {
-    return new AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.blueAccent,
-        title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
-            size: 184.0, color: Colors.white),
-        bottom: new PreferredSize(
-          child: _getAppBarBottom(),
-          preferredSize: Size.fromHeight(_page == 0 ? 80.0 : 0.0),
-        ));
   }
 
   Widget _buildPageView() {
@@ -83,10 +65,6 @@ class _MainAppState extends State<MainApp> {
   BottomNavigationBarItem _generateNavItem(IconData icon, String title) {
     return new BottomNavigationBarItem(
         icon: new Icon(icon), title: new Text(title));
-  }
-
-  Widget _getAppBarBottom() {
-    return _page == 0 ? new AppBarBottom() : new Container(height: 0.0);
   }
 
   void _onPageChanged(int page) {

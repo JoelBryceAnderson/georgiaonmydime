@@ -8,10 +8,10 @@ class NewsScreen extends StatelessWidget {
 
   final List<ListItem> items;
 
-  static List<ListItem> _generateNewsList() {
+  static List<ListItem> _generateMocksList() {
     return new List<ListItem>.generate(
       15,
-          (i) => new NewsArticleItem(new NewsArticle(
+      (i) => new NewsArticleItem(new NewsArticle(
           "Publico Kitchen & Tap Now Open in Midtown",
           "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
           "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
@@ -22,6 +22,13 @@ class NewsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new CardList(items: _generateNewsList());
+    return new CustomScrollView(slivers: <Widget>[
+      new SliverAppBar(
+          floating: true,
+          backgroundColor: Colors.blueAccent,
+          title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
+              size: 184.0, color: Colors.white)),
+      CardList(items: _generateMocksList())
+    ]);
   }
 }

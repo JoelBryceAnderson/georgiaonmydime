@@ -8,10 +8,10 @@ class GuideScreen extends StatelessWidget {
 
   final List<ListItem> items;
 
-  static List<ListItem> _generateGuideList() {
+  static List<ListItem> _generateMocksList() {
     return new List<ListItem>.generate(
       15,
-          (i) => new GuideItem(new Guide(
+      (i) => new GuideItem(new Guide(
           "Best Bars to Watch Atlanta United Matches",
           "As we all know, being an Atlanta sports fan can be pretty depressing. After a heartbreaking Super Bowl loss for the Falcons followed by a Georgia Bulldawgs loss in the Nation Championship (played in Atlanta, of course), it seems like the ATL isn’t much of a football town. Lucky for us, there is a third football team that calls Georgia its home.",
           "https://georgiaonmydime.com/wp-content/uploads/2018/03/atlanta-united-bars-372x240.jpg",
@@ -22,6 +22,13 @@ class GuideScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new CardList(items: _generateGuideList());
+    return new CustomScrollView(slivers: <Widget>[
+      new SliverAppBar(
+          floating: true,
+          backgroundColor: Colors.blueAccent,
+          title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
+              size: 184.0, color: Colors.white)),
+      CardList(items: _generateMocksList())
+    ]);
   }
 }

@@ -18,25 +18,30 @@ class _CardListState extends State<CardList> {
 
   final List<ListItem> items;
 
+  Widget getWidgetFromIndex(int index) {
+    final item = items[index];
+
+    if (item is HeadingItem) {
+      return new ListTile(
+        title:
+            new Text(item.heading, style: Theme.of(context).textTheme.headline),
+      );
+    } else if (item is NewsArticleItem) {
+      return new NewsArticleCard(newsArticle: item.newsArticle);
+    } else if (item is HappyHourItem) {
+      return new HappyHourCard(happyHour: item.happyHour);
+    } else if (item is GuideItem) {
+      return new GuideCard(guide: item.guide);
+    }
+    return new ListTile(
+        title: new Text("Error", style: Theme.of(context).textTheme.headline));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return new ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          final item = items[index];
-
-          if (item is HeadingItem) {
-            return new ListTile(
-              title: new Text(item.heading,
-                  style: Theme.of(context).textTheme.headline),
-            );
-          } else if (item is NewsArticleItem) {
-            return new NewsArticleCard(newsArticle: item.newsArticle);
-          } else if (item is HappyHourItem) {
-            return new HappyHourCard(happyHour: item.happyHour);
-          } else if (item is GuideItem) {
-            return new GuideCard(guide: item.guide);
-          }
-        });
+    return new SliverList(
+        delegate: new SliverChildBuilderDelegate(
+            (context, index) => getWidgetFromIndex(index),
+            childCount: items.length));
   }
 }
