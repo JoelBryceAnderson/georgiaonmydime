@@ -5,6 +5,7 @@ import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
 import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
+import 'package:latlong/latlong.dart';
 
 class HappyHourScreen extends StatelessWidget {
   const HappyHourScreen({Key key, this.items}) : super(key: key);
@@ -23,6 +24,7 @@ class HappyHourScreen extends StatelessWidget {
               "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
               "Midtown",
               i % 2 == 0 ? OpenStatus.open : OpenStatus.closed,
+              new LatLng(33.7723, -84.3793),
               i % 2 == 0)),
     );
   }
