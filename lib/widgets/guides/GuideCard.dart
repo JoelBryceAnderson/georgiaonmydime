@@ -22,14 +22,14 @@ class GuideCard extends StatelessWidget {
             new Image.network(guide.imageUrl,
                 height: 150.0, fit: BoxFit.fitWidth),
             new Container(
-              margin: new EdgeInsets.only(top: 12.0, left: 12.0, bottom: 16.0),
+              margin: new EdgeInsets.only(top: 12.0, left: 12.0, right: 12.0, bottom: 16.0),
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   new Text(guide.title,
                       style: Theme.of(context).textTheme.title),
                   new Container(
-                      margin: new EdgeInsets.only(top: 12.0, right: 12.0),
+                      margin: new EdgeInsets.only(top: 12.0),
                       child: new Text(guide.description,
                           style: Theme.of(context).textTheme.body1))
                 ],

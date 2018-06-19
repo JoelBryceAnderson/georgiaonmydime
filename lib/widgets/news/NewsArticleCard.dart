@@ -22,14 +22,14 @@ class NewsArticleCard extends StatelessWidget {
             new Image.network(newsArticle.imageUrl,
                 height: 150.0, fit: BoxFit.fitWidth),
             new Container(
-              margin: new EdgeInsets.only(top: 12.0, left: 12.0, bottom: 16.0),
+              margin: new EdgeInsets.only(top: 12.0, left: 12.0, right: 12.0, bottom: 16.0),
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   new Text(newsArticle.title,
                       style: Theme.of(context).textTheme.title),
                   new Container(
-                      margin: new EdgeInsets.only(top: 12.0, right: 12.0),
+                      margin: new EdgeInsets.only(top: 12.0),
                       child: new Text(newsArticle.description,
                           style: Theme.of(context).textTheme.body1))
                 ],
