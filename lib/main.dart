@@ -20,62 +20,82 @@ class _MainAppState extends State<MainApp> {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   }
 
-  BottomNavigationBarItem _generateNavItem(IconData icon, String title) {
-    return new BottomNavigationBarItem(
-        icon: new Icon(icon), title: new Text(title));
-  }
-
   @override
   Widget build(BuildContext context) {
     _setWindowProperties();
     return new MaterialApp(
         title: 'Georgia On My Dime',
-        theme: new ThemeData(
-          fontFamily: 'Quicksand',
-          // This is the theme of your application.
-          primarySwatch: Colors.grey,
-        ),
+        theme: _appTheme(),
         home: new Scaffold(
-          appBar: new AppBar(
-              centerTitle: true,
-              backgroundColor: Colors.blueAccent,
-              title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
-                  size: 184.0, color: Colors.white),
-              bottom: new PreferredSize(
-                child: new AppBarBottom(),
-                preferredSize: const Size.fromHeight(80.0),
-              )),
-          body: new PageView(
-              children: <Widget>[
-                new HappyHourScreen(),
-                new GuideScreen(),
-                new NewsScreen(),
-                new HappyHourScreen()
-              ],
-              controller: _pageController,
-              onPageChanged: onPageChanged,
-              physics: new NeverScrollableScrollPhysics()),
-          bottomNavigationBar: new BottomNavigationBar(
-              currentIndex: _page,
-              items: [
-                _generateNavItem(Icons.local_bar, "Happy Hours"),
-                _generateNavItem(Icons.book, "Guides"),
-                _generateNavItem(Icons.library_books, "News"),
-                _generateNavItem(Icons.calendar_today, "Events")
-              ],
-              type: BottomNavigationBarType.fixed,
-              onTap: navigationTapped,
-              fixedColor: Colors.blueAccent),
+          appBar: _buildAppBar(),
+          body: _buildPageView(),
+          bottomNavigationBar: _buildBottomBar(),
         ));
   }
 
-  void onPageChanged(int page) {
+  ThemeData _appTheme() {
+    return new ThemeData(
+      fontFamily: 'Quicksand',
+      // This is the theme of your application.
+      primarySwatch: Colors.grey,
+    );
+  }
+
+  Widget _buildAppBar() {
+    return new AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.blueAccent,
+        title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
+            size: 184.0, color: Colors.white),
+        bottom: new PreferredSize(
+          child: _getAppBarBottom(),
+          preferredSize: Size.fromHeight(_page == 0 ? 80.0 : 0.0),
+        ));
+  }
+
+  Widget _buildPageView() {
+    return new PageView(
+        children: <Widget>[
+          new HappyHourScreen(),
+          new GuideScreen(),
+          new NewsScreen(),
+          new HappyHourScreen()
+        ],
+        controller: _pageController,
+        onPageChanged: _onPageChanged,
+        physics: new NeverScrollableScrollPhysics());
+  }
+
+  Widget _buildBottomBar() {
+    return new BottomNavigationBar(
+        currentIndex: _page,
+        items: [
+          _generateNavItem(Icons.local_bar, "Happy Hours"),
+          _generateNavItem(Icons.book, "Guides"),
+          _generateNavItem(Icons.library_books, "News"),
+          _generateNavItem(Icons.calendar_today, "Events")
+        ],
+        type: BottomNavigationBarType.fixed,
+        onTap: _navigationTapped,
+        fixedColor: Colors.blueAccent);
+  }
+
+  BottomNavigationBarItem _generateNavItem(IconData icon, String title) {
+    return new BottomNavigationBarItem(
+        icon: new Icon(icon), title: new Text(title));
+  }
+
+  Widget _getAppBarBottom() {
+    return _page == 0 ? new AppBarBottom() : new Container(height: 0.0);
+  }
+
+  void _onPageChanged(int page) {
     setState(() {
       _page = page;
     });
   }
 
-  void navigationTapped(int page) {
+  void _navigationTapped(int page) {
     _pageController.animateToPage(page,
         duration: const Duration(milliseconds: 300), curve: Curves.ease);
   }
