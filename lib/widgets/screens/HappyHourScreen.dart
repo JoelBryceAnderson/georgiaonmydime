@@ -33,14 +33,13 @@ class HappyHourScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return new CustomScrollView(slivers: <Widget>[
       new SliverAppBar(
-          expandedHeight: 200.0,
+          expandedHeight: 164.0,
           pinned: true,
           backgroundColor: Colors.blueAccent,
           centerTitle: true,
           title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
               size: 184.0, color: Colors.white),
-          flexibleSpace: new FlexibleSpaceBar(
-              title: new AppBarBottom(), centerTitle: true)),
+          flexibleSpace: new FlexibleSpaceBar(background: new AppBarBottom())),
       CardList(items: _generateMocksList())
     ]);
   }

@@ -4,7 +4,7 @@ class AppBarBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        margin: EdgeInsets.only(left: 88.0, right: 88.0, bottom: 12.0),
+        margin: EdgeInsets.only(left: 88.0, right: 88.0, bottom: 12.0, top: 88.0),
         height: 80.0,
         child: new Column(
           children: <Widget>[
