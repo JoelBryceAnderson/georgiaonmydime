@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_calendar/flutter_calendar.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/widgets/guides/GuideCard.dart';
 import 'package:georgiaonmydime/widgets/happyhour/HappyHourCard.dart';
@@ -32,6 +33,8 @@ class _CardListState extends State<CardList> {
       return new HappyHourCard(happyHour: item.happyHour);
     } else if (item is GuideItem) {
       return new GuideCard(guide: item.guide);
+    } else if (item is EventCalendarItem) {
+      return new Calendar(onDateSelected: item.onDateChanged);
     }
     return new ListTile(
         title: new Text("Error", style: Theme.of(context).textTheme.headline));

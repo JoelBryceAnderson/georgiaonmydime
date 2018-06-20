@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/events/Event.dart';
 import 'package:georgiaonmydime/data/guides/Guide.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
@@ -36,4 +37,10 @@ class EventItem implements ListItem {
   final Event event;
 
   EventItem(this.event);
+}
+
+class EventCalendarItem implements ListItem {
+  final ValueChanged<DateTime> onDateChanged;
+
+  EventCalendarItem(this.onDateChanged);
 }
