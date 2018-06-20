@@ -11,7 +11,8 @@ class HappyHourCard extends StatelessWidget {
   final HappyHour happyHour;
 
   _launchMaps() async {
-    String androidURL = 'http://maps.google.com/maps?q=loc:${happyHour.latLng.latitude},'
+    String androidURL = 'http://maps.google.com/maps?q=loc:${happyHour.latLng
+        .latitude},'
         '${happyHour.latLng.longitude}(${happyHour.title})';
     String googleUrl = 'comgooglemaps://?center=${happyHour.latLng.latitude},'
         '${happyHour.latLng.longitude}';
@@ -63,10 +64,11 @@ class HappyHourCard extends StatelessWidget {
             ),
             new Divider(height: 4.0, color: Colors.grey),
             new Container(
-                margin: new EdgeInsets.only(right:16.0, bottom: 8.0),
+                margin: new EdgeInsets.only(right: 12.0, bottom: 8.0, left: 12.0),
                 child: new Row(children: <Widget>[
                   new Expanded(
                       child: new FlatButton(
+                          padding: new EdgeInsets.all(0.0),
                           onPressed: _launchMaps,
                           child: new Row(children: <Widget>[
                             new Container(
