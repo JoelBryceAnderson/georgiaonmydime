@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_calendar/flutter_calendar.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
+import 'package:georgiaonmydime/widgets/cards/EventCard.dart';
 import 'package:georgiaonmydime/widgets/cards/GuideCard.dart';
 import 'package:georgiaonmydime/widgets/cards/HappyHourCard.dart';
 import 'package:georgiaonmydime/widgets/cards/NewsArticleCard.dart';
@@ -23,10 +24,7 @@ class _CardListState extends State<CardList> {
     final item = items[index];
 
     if (item is HeadingItem) {
-      return new ListTile(
-        title:
-            new Text(item.heading, style: Theme.of(context).textTheme.headline),
-      );
+      return buildHeader(item);
     } else if (item is NewsArticleItem) {
       return new NewsArticleCard(newsArticle: item.newsArticle);
     } else if (item is HappyHourItem) {
@@ -35,9 +33,18 @@ class _CardListState extends State<CardList> {
       return new GuideCard(guide: item.guide);
     } else if (item is EventCalendarItem) {
       return new Calendar(onDateSelected: item.onDateChanged);
+    } else if (item is EventItem) {
+      return new EventCard(event: item.event);
     }
+
     return new ListTile(
         title: new Text("Error", style: Theme.of(context).textTheme.headline));
+  }
+
+  Widget buildHeader(HeadingItem item) {
+    return new ListTile(
+        title: new Text(item.heading,
+            style: Theme.of(context).textTheme.headline));
   }
 
   @override
