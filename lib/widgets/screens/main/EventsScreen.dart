@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/data/guides/Guide.dart';
+import 'package:georgiaonmydime/data/events/Event.dart';
+import 'package:georgiaonmydime/data/events/EventVenue.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
 
 class EventsScreen extends StatefulWidget {
@@ -31,12 +32,18 @@ class _EventState extends State<EventsScreen> {
         return new HeadingItem(day);
         break;
       default:
-        return new GuideItem(new Guide(
-            "Best Bars to Watch Atlanta United Matches",
-            "As we all know, being an Atlanta sports fan can be pretty depressing. After a heartbreaking Super Bowl loss for the Falcons followed by a Georgia Bulldawgs loss in the Nation Championship (played in Atlanta, of course), it seems like the ATL isn’t much of a football town. Lucky for us, there is a third football team that calls Georgia its home.",
-            "https://georgiaonmydime.com/wp-content/uploads/2018/03/atlanta-united-bars-372x240.jpg",
-            "https://georgiaonmydime.com/best-bars-to-watch-atlanta-united-matches/",
-            DateTime.now()));
+        return new EventItem(new Event(
+            "Piedmont Park Farmers Market",
+            "The Green Market returns on March 24th, 2018 in Piedmont Park and we cannot wait! Wake up Saturday morning to Piedmont Park’s Green Market, a local farmers market serving Midtown’s population with fresh, clean and local food. ",
+            "https://georgiaonmydime.com/wp-content/uploads/2018/03/00000IMG_00000_BURST20180324120705874_COVER-e1524523804151-300x157.jpg",
+            "https://georgiaonmydime.com/event/piedmont-park-farmers-market/",
+            "",
+            "June 23",
+            "9:00 am - 1:00 pm",
+            "Farmers Market",
+            new List(),
+            new EventVenue("Piedmont Park", "",
+                "400 Park Dr NE ATLANTA, GA 30309 United States")));
         break;
     }
   }

@@ -5,8 +5,8 @@ class Event {
   final String title;
   final String description;
   final String imageUrl;
-  final String directions;
   final String eventUrl;
+  final String directions;
   final String date;
   final String time;
   final String category;
@@ -17,8 +17,8 @@ class Event {
       this.title,
       this.description,
       this.imageUrl,
-      this.directions,
       this.eventUrl,
+      this.directions,
       this.date,
       this.time,
       this.category,
