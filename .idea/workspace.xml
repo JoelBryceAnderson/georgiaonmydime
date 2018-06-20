@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7e7bd6-5bb3-41e6-8b12-f8ba90fd907e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
+      <change beforePath="$PROJECT_DIR$/lib/data/ListItem.dart" afterPath="$PROJECT_DIR$/lib/data/ListItem.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -52,12 +49,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventVenue.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventVenue.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/data/events/EventVenue.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListItem.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,7 +167,6 @@
         <option value="$PROJECT_DIR$/lib/data/happyhour/HappyHourFilter.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/happyhour/BookmarkedIcon.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/lists/NewsArticleList.dart" />
-        <option value="$PROJECT_DIR$/lib/data/ListItem.dart" />
         <option value="$PROJECT_DIR$/lib/data/guides/Guide.dart" />
         <option value="$PROJECT_DIR$/lib/data/news/NewsArticle.dart" />
         <option value="$PROJECT_DIR$/lib/Mocks.dart" />
@@ -177,6 +185,7 @@
         <option value="$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart" />
         <option value="$PROJECT_DIR$/lib/data/events/EventVenue.dart" />
         <option value="$PROJECT_DIR$/lib/data/events/Event.dart" />
+        <option value="$PROJECT_DIR$/lib/data/ListItem.dart" />
       </list>
     </option>
   </component>
@@ -538,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.flutter-plugins">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -790,6 +792,16 @@
         <state relative-caret-position="90">
           <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,3 +1,4 @@
+import 'package:georgiaonmydime/data/events/Event.dart';
 import 'package:georgiaonmydime/data/guides/Guide.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/data/news/NewsArticle.dart';
@@ -29,4 +30,10 @@ class GuideItem implements ListItem {
   final Guide guide;
 
   GuideItem(this.guide);
+}
+
+class EventItem implements ListItem {
+  final Event event;
+
+  EventItem(this.event);
 }
