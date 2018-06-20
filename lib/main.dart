@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:georgiaonmydime/widgets/screens/main/EventsScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/main/GuideScreen.dart';
@@ -60,7 +61,7 @@ class _MainAppState extends State<MainApp> {
         ],
         type: BottomNavigationBarType.fixed,
         onTap: _navigationTapped,
-        fixedColor: Colors.blueAccent);
+        fixedColor: GeorgiaColors.ceruleanBlue);
   }
 
   BottomNavigationBarItem _generateNavItem(IconData icon, String title) {

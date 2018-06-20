@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
+import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 
 class BookmarkedIcon extends StatefulWidget {
   const BookmarkedIcon({Key key, this.happyHour}) : super(key: key);
@@ -20,7 +21,7 @@ class _BookmarkState extends State<BookmarkedIcon> {
     return new IconButton(
         icon: new Icon(
             _happyHour.saved ? Icons.bookmark : Icons.bookmark_border,
-            color: Colors.blueAccent),
+            color: GeorgiaColors.ceruleanBlue),
         onPressed: _onClicked);
   }
 

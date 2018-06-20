@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/news/NewsArticle.dart';
+import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
 
 class NewsScreen extends StatelessWidget {
@@ -25,7 +26,7 @@ class NewsScreen extends StatelessWidget {
     return new CustomScrollView(slivers: <Widget>[
       new SliverAppBar(
           floating: true,
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: GeorgiaColors.ceruleanBlue,
           title: new Text("News",
               style: new TextStyle(color: Colors.white, fontSize: 24.0))),
       CardList(items: _generateMocksList())

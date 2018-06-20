@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/events/Event.dart';
+import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EventCard extends StatelessWidget {
@@ -11,9 +12,7 @@ class EventCard extends StatelessWidget {
     launch(event.eventUrl);
   }
 
-  void _addToCalendar() {
-    launch(event.eventUrl);
-  }
+  void _addToCalendar() {}
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +64,7 @@ class EventCard extends StatelessWidget {
                 onPressed: _openLink,
                 child:
                     new Text("Read More", style: new TextStyle(fontSize: 18.0)),
-                color: Colors.blueAccent,
+                color: GeorgiaColors.ceruleanBlue,
                 textColor: Colors.white)
           ],
         ));

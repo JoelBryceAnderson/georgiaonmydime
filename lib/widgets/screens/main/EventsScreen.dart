@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/events/Event.dart';
 import 'package:georgiaonmydime/data/events/EventVenue.dart';
+import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
 
 class EventsScreen extends StatefulWidget {
@@ -63,7 +64,7 @@ class _EventState extends State<EventsScreen> {
     return new CustomScrollView(slivers: <Widget>[
       new SliverAppBar(
           floating: true,
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: GeorgiaColors.ceruleanBlue,
           title: new Text("Events",
               style: new TextStyle(color: Colors.white, fontSize: 24.0))),
       CardList(items: _generateMocksList())
