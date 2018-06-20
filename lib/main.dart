@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
-import 'package:georgiaonmydime/widgets/screens/EventsScreen.dart';
-import 'package:georgiaonmydime/widgets/screens/GuideScreen.dart';
-import 'package:georgiaonmydime/widgets/screens/HappyHourScreen.dart';
-import 'package:georgiaonmydime/widgets/screens/NewsScreen.dart';
+import 'package:georgiaonmydime/widgets/screens/main/EventsScreen.dart';
+import 'package:georgiaonmydime/widgets/screens/main/GuideScreen.dart';
+import 'package:georgiaonmydime/widgets/screens/main/HappyHourScreen.dart';
+import 'package:georgiaonmydime/widgets/screens/main/NewsScreen.dart';
 
 void main() => runApp(new MainApp());
 

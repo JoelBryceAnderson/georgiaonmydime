@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_calendar/flutter_calendar.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/widgets/guides/GuideCard.dart';
-import 'package:georgiaonmydime/widgets/happyhour/HappyHourCard.dart';
-import 'package:georgiaonmydime/widgets/news/NewsArticleCard.dart';
+import 'package:georgiaonmydime/widgets/cards/GuideCard.dart';
+import 'package:georgiaonmydime/widgets/cards/HappyHourCard.dart';
+import 'package:georgiaonmydime/widgets/cards/NewsArticleCard.dart';
 
 class CardList extends StatefulWidget {
   const CardList({Key key, this.items}) : super(key: key);

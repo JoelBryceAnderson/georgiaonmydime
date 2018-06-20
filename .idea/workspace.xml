@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7e7bd6-5bb3-41e6-8b12-f8ba90fd907e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/data/ListItem.dart" afterPath="$PROJECT_DIR$/lib/data/ListItem.dart" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/guides/GuideCard.dart" afterPath="$PROJECT_DIR$/lib/widgets/cards/GuideCard.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/happyhour/HappyHourCard.dart" afterPath="$PROJECT_DIR$/lib/widgets/cards/HappyHourCard.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/navigation/CardList.dart" afterPath="$PROJECT_DIR$/lib/widgets/navigation/CardList.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/news/NewsArticleCard.dart" afterPath="$PROJECT_DIR$/lib/widgets/cards/NewsArticleCard.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/main/EventsScreen.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/GuideScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/main/GuideScreen.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/HappyHourScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/main/HappyHourScreen.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/NewsScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/main/NewsScreen.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -30,53 +39,67 @@
         </entry>
       </file>
       <file leaf-file-name="EventsScreen.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart">
+        <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/EventsScreen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/data/events/Event.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="45" lean-forward="true" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventVenue.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/data/events/EventVenue.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListItem.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+            <state relative-caret-position="945">
+              <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
               <folding>
-                <element signature="e#0#56#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="GuideScreen.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/widgets/screens/GuideScreen.dart">
+        <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/GuideScreen.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="20" selection-end-column="3" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookmarkedIcon.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/widgets/happyhour/BookmarkedIcon.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListItem.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Guide.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/data/guides/Guide.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardList.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/widgets/navigation/CardList.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,7 +127,7 @@
         </entry>
       </file>
       <file leaf-file-name="NewsScreen.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/widgets/screens/NewsScreen.dart">
+        <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/NewsScreen.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
@@ -171,7 +194,6 @@
         <option value="$PROJECT_DIR$/lib/data/news/NewsArticle.dart" />
         <option value="$PROJECT_DIR$/lib/Mocks.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/navigation/AppNavigationBar.dart" />
-        <option value="$PROJECT_DIR$/lib/widgets/navigation/CardList.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/screens/GuideScreen.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/screens/NewsScreen.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/news/NewsArticleCard.dart" />
@@ -182,10 +204,11 @@
         <option value="$PROJECT_DIR$/lib/widgets/screens/HappyHourScreen.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart" />
         <option value="$PROJECT_DIR$/lib/data/events/EventVenue.dart" />
         <option value="$PROJECT_DIR$/lib/data/events/Event.dart" />
         <option value="$PROJECT_DIR$/lib/data/ListItem.dart" />
+        <option value="$PROJECT_DIR$/lib/widgets/navigation/CardList.dart" />
+        <option value="$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart" />
       </list>
     </option>
   </component>
@@ -261,7 +284,29 @@
               <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
@@ -279,10 +324,12 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="calendar&#9;null&#9;null&#10;p&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;pub&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;plist&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/ios/Flutter/App.framework/Info.plist&#10;scaletra&#9;null&#9;null&#10;pu&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;yam&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;expan&#9;null&#9;null&#10;icon&#9;null&#9;null&#10;pubspec.y&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml" />
+    <property name="SearchEverywhereHistoryKey" value="list&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/lib/data/ListItem.dart&#10;calendar&#9;null&#9;null&#10;p&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;pub&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;plist&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/ios/Flutter/App.framework/Info.plist&#10;scaletra&#9;null&#9;null&#10;pu&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;yam&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml&#10;expan&#9;null&#9;null&#10;icon&#9;null&#9;null&#10;pubspec.y&#9;FILE&#9;file:///Users/joelanderson/GitHub/georgiaonmydime/pubspec.yaml" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/widgets/screens/main" />
+      <recent name="$PROJECT_DIR$/lib/widgets/cards" />
       <recent name="$PROJECT_DIR$/lib/widgets/navigation" />
       <recent name="$PROJECT_DIR$/lib/data/happyhour" />
       <recent name="$PROJECT_DIR$/lib/widgets/happyhour" />
@@ -613,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/navigation/CardList.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Flutter/flutter/packages/flutter/lib/src/widgets/sliver.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -641,27 +681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/news/NewsArticleCard.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widgets/cards/NewsArticleCard.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="24" column="77" lean-forward="false" selection-start-line="24" selection-start-column="77" selection-end-line="24" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/guides/GuideCard.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/happyhour/BookmarkedIcon.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -693,15 +716,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/navigation/AppBarBottom.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/NewsScreen.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/NewsScreen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
@@ -717,20 +732,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/happyhour/HappyHourCard.dart">
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_calendar-0.0.2/lib/flutter_calendar.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="56" />
+        <state relative-caret-position="-1787">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding>
-            <element signature="e#0#39#0" expanded="false" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/HappyHourScreen.dart">
+    <entry file="file://$PROJECT_DIR$/lib/data/events/EventVenue.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/events/Event.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="45" lean-forward="true" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widgets/cards/GuideCard.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/guides/Guide.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/HappyHourScreen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widgets/happyhour/BookmarkedIcon.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widgets/cards/HappyHourCard.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -745,62 +818,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_calendar-0.0.2/lib/flutter_calendar.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/GuideScreen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1787">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        <state relative-caret-position="105">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widgets/navigation/AppBarBottom.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/EventsScreen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/GuideScreen.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widgets/navigation/CardList.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/EventsScreen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/guides/Guide.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/events/Event.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="45" lean-forward="true" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/events/EventVenue.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/ListItem.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        <state relative-caret-position="285">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
