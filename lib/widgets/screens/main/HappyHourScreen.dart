@@ -22,6 +22,7 @@ class HappyHourScreen extends StatelessWidget {
               Weekday.monday,
               "Torched Hop Brewing Company",
               "All Day: ​Every Tuesday the kitchen is whipping up 4 dollar sliders. The options include Pork Belly BLT, Super THC, Fried Avocado, and the SMCC Burger.",
+              "https://georgiaonmydime.com/atlanta-happy-hour/torched-hop-brewing-company/",
               "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
               "Midtown",
               i % 2 == 0 ? OpenStatus.open : OpenStatus.closed,
