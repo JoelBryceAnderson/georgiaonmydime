@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
-import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
+import 'package:georgiaonmydime/widgets/navigation/NavigationScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/main/EventsScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/main/GuideScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/main/HappyHourScreen.dart';
@@ -14,8 +13,8 @@ class MainApp extends StatefulWidget {
   _MainAppState createState() => new _MainAppState();
 }
 
-class _MainAppState extends State<MainApp> {
-  PageController _pageController;
+class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
+  List<NavigationScreen> _navigationViews;
   int _page = 0;
 
   @override
@@ -24,9 +23,27 @@ class _MainAppState extends State<MainApp> {
         title: 'Georgia On My Dime',
         theme: _appTheme(),
         home: new Scaffold(
-          body: _buildPageView(),
+          body: _buildTransitionsStack(),
           bottomNavigationBar: _buildBottomBar(),
         ));
+  }
+
+  Widget _buildTransitionsStack() {
+    final List<FadeTransition> transitions = <FadeTransition>[];
+
+    for (NavigationScreen view in _navigationViews)
+      transitions.add(view.transition(BottomNavigationBarType.fixed, context));
+
+    // We want to have the newly animating (fading in) views on top.
+    transitions.sort((FadeTransition a, FadeTransition b) {
+      final Animation<double> aAnimation = a.opacity;
+      final Animation<double> bAnimation = b.opacity;
+      final double aValue = aAnimation.value;
+      final double bValue = bAnimation.value;
+      return aValue.compareTo(bValue);
+    });
+
+    return new Stack(children: transitions);
   }
 
   ThemeData _appTheme() {
@@ -35,19 +52,6 @@ class _MainAppState extends State<MainApp> {
       // This is the theme of your application.
       primarySwatch: Colors.grey,
     );
-  }
-
-  Widget _buildPageView() {
-    return new PageView(
-        children: <Widget>[
-          new HappyHourScreen(),
-          new GuideScreen(),
-          new NewsScreen(),
-          new EventsScreen()
-        ],
-        controller: _pageController,
-        onPageChanged: _onPageChanged,
-        physics: new NeverScrollableScrollPhysics());
   }
 
   Widget _buildBottomBar() {
@@ -60,7 +64,7 @@ class _MainAppState extends State<MainApp> {
           _generateNavItem(Icons.calendar_today, "Events")
         ],
         type: BottomNavigationBarType.fixed,
-        onTap: _navigationTapped,
+        onTap: _onPageChanged,
         fixedColor: GeorgiaColors.ceruleanBlue);
   }
 
@@ -71,24 +75,44 @@ class _MainAppState extends State<MainApp> {
 
   void _onPageChanged(int page) {
     setState(() {
+      _navigationViews[_page].controller.reverse();
       _page = page;
+      _navigationViews[_page].controller.forward();
     });
-  }
-
-  void _navigationTapped(int page) {
-    _pageController.animateToPage(page,
-        duration: const Duration(milliseconds: 300), curve: Curves.ease);
   }
 
   @override
   void initState() {
     super.initState();
-    _pageController = new PageController();
+
+    _navigationViews = <NavigationScreen>[
+      new NavigationScreen(
+        screen: new HappyHourScreen(),
+        vsync: this
+      ),
+      new NavigationScreen(
+          screen: new GuideScreen(),
+          vsync: this
+      ),
+      new NavigationScreen(
+          screen: new NewsScreen(),
+          vsync: this
+      ),
+      new NavigationScreen(
+          screen: new EventsScreen(),
+          vsync: this
+      )
+    ];
+
+    for (NavigationScreen view in _navigationViews)
+      view.controller.addListener(_rebuild);
+
+    _navigationViews[_page].controller.value = 1.0;
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-    _pageController.dispose();
+  void _rebuild() {
+    setState(() {
+      // Rebuild in order to animate views.
+    });
   }
 }
