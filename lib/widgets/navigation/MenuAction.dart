@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/widgets/screens/happyhour/AddHappyHourScreen.dart';
+import 'package:georgiaonmydime/widgets/screens/settings/AboutScreen.dart';
 import 'package:georgiaonmydime/widgets/screens/settings/SettingsScreen.dart';
 
 class MenuAction extends StatelessWidget {
@@ -26,6 +27,8 @@ class MenuAction extends StatelessWidget {
   }
 
   void openAboutScreen(BuildContext context) {
+    Navigator.push(context,
+        new MaterialPageRoute(builder: (context) => AboutScreen()));
   }
 
   void openSettingsScreen(BuildContext context) {
