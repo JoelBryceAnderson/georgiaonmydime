@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:georgiaonmydime/widgets/screens/happyhour/AddHappyHourScreen.dart';
 import 'package:georgiaonmydime/widgets/settings/MenuOption.dart';
 
 class MenuAction extends StatelessWidget {
   const MenuAction({Key key}) : super(key: key);
 
-  void _select(MenuOption menuOption) {
+  void selectMenuOption(BuildContext context, MenuOption menuOption) {
     switch (menuOption.key) {
       case 0:
         openAboutScreen();
         break;
       case 1:
+        openAddHappyHourScreen(context);
+        break;
+      case 2:
         openSettingsScreen();
         break;
     }
+  }
+
+  void openAddHappyHourScreen(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) => new AddHappyHourScreen());
   }
 
   void openAboutScreen() {}
@@ -34,7 +44,7 @@ class MenuAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new PopupMenuButton<MenuOption>(
-      onSelected: _select,
+      onSelected: (menuOption) => selectMenuOption(context, menuOption),
       icon: getIcon(Theme.of(context).platform),
       itemBuilder: (BuildContext context) {
         return choices.map((MenuOption choice) {
@@ -49,6 +59,7 @@ class MenuAction extends StatelessWidget {
 }
 
 const List<MenuOption> choices = const <MenuOption>[
-  const MenuOption(title: 'About Georgia On My Dime', key: 1),
-  const MenuOption(title: 'Settings', key: 0),
+  const MenuOption(title: 'About Georgia On My Dime', key: 0),
+  const MenuOption(title: 'Add a Happy Hour', key: 1),
+  const MenuOption(title: 'Settings', key: 2),
 ];
