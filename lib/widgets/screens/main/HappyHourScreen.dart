@@ -6,6 +6,7 @@ import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
+import 'package:georgiaonmydime/widgets/settings/MenuAction.dart';
 import 'package:latlong/latlong.dart';
 
 class HappyHourScreen extends StatelessWidget {
@@ -37,6 +38,7 @@ class HappyHourScreen extends StatelessWidget {
       new SliverAppBar(
           expandedHeight: 164.0,
           pinned: true,
+          actions: <Widget>[new MenuAction()],
           backgroundColor: GeorgiaColors.ceruleanBlue,
           centerTitle: true,
           title: new ImageIcon(new AssetImage("assets/gomd_title.png"),

@@ -4,6 +4,7 @@ import 'package:georgiaonmydime/data/events/Event.dart';
 import 'package:georgiaonmydime/data/events/EventVenue.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
+import 'package:georgiaonmydime/widgets/settings/MenuAction.dart';
 
 class EventsScreen extends StatefulWidget {
   const EventsScreen({Key key, this.items}) : super(key: key);
@@ -64,6 +65,7 @@ class _EventState extends State<EventsScreen> {
     return new CustomScrollView(slivers: <Widget>[
       new SliverAppBar(
           floating: true,
+          actions: <Widget>[new MenuAction()],
           backgroundColor: GeorgiaColors.ceruleanBlue,
           title: new Text("Events",
               style: new TextStyle(color: Colors.white, fontSize: 24.0))),
