@@ -3,7 +3,7 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/guides/Guide.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
-import 'package:georgiaonmydime/widgets/settings/MenuAction.dart';
+import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';
 
 class GuideScreen extends StatelessWidget {
   const GuideScreen({Key key, this.items}) : super(key: key);

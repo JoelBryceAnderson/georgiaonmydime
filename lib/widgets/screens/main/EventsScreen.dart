@@ -4,7 +4,7 @@ import 'package:georgiaonmydime/data/events/Event.dart';
 import 'package:georgiaonmydime/data/events/EventVenue.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
-import 'package:georgiaonmydime/widgets/settings/MenuAction.dart';
+import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';
 
 class EventsScreen extends StatefulWidget {
   const EventsScreen({Key key, this.items}) : super(key: key);

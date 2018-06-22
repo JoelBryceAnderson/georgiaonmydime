@@ -6,7 +6,7 @@ import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
-import 'package:georgiaonmydime/widgets/settings/MenuAction.dart';
+import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';
 import 'package:latlong/latlong.dart';
 
 class HappyHourScreen extends StatelessWidget {

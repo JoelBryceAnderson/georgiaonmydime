@@ -17,7 +17,8 @@ class AddHappyHourScreen extends StatelessWidget {
               child: new Text("Check back soon!",
                   style: Theme.of(context).textTheme.title)),
           new Padding(
-              padding: new EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0, bottom: 32.0),
+              padding: new EdgeInsets.only(
+                  top: 16.0, left: 16.0, right: 16.0, bottom: 32.0),
               child: new Text(
                   "We're still working on this feature.\nIn the meantime, you can submit a happy hour online at:\n\nGeorgiaOnMyDime.com/submit-listing",
                   style: Theme.of(context).textTheme.body1)),
