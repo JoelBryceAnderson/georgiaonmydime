@@ -86,22 +86,10 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
     super.initState();
 
     _navigationViews = <NavigationScreen>[
-      new NavigationScreen(
-        screen: new HappyHourScreen(),
-        vsync: this
-      ),
-      new NavigationScreen(
-          screen: new GuideScreen(),
-          vsync: this
-      ),
-      new NavigationScreen(
-          screen: new NewsScreen(),
-          vsync: this
-      ),
-      new NavigationScreen(
-          screen: new EventsScreen(),
-          vsync: this
-      )
+      new NavigationScreen(screen: new HappyHourScreen(), vsync: this),
+      new NavigationScreen(screen: new GuideScreen(), vsync: this),
+      new NavigationScreen(screen: new NewsScreen(), vsync: this),
+      new NavigationScreen(screen: new EventsScreen(), vsync: this)
     ];
 
     for (NavigationScreen view in _navigationViews)
