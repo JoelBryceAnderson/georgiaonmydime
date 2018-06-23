@@ -13,6 +13,10 @@ class AboutScreen extends StatelessWidget {
   final String aboutDesc1 =
       "Georgia on my Dime is Atlanta’s number one site for up-to-date happy hour specials, upcoming events, and local guides. Whether you’re an Atlanta native or new to the city, you’ll be sure to discover great deals and local events!\n\nWe work hard to ensure all of our information is current and accurate. If you notice an error, please let us know, and we will correct it as soon as possible.\n\nIf you are a local business owner and would like to promote your event or restaurant, get in touch with us below and we will get back to you promptly.\n\nCheers!";
   final String aboutDesc2 = "-Georgia on my Dime";
+  final String valueDesc1 = "By Atlantans, for Atlantans. We love sharing the things that make our city so unique.";
+  final String valueDesc2 = "Our list of Happy Hours and deals in Atlanta ensures that you can have a blast - without breaking the bank.";
+  final String valueDesc3 = "We showcase the best Atlanta has to offer. If we don't have something positive to say, we won't say it at all.";
+  final String valueDesc4 = "Our list of deals and Happy Hours is always growing. Check it out today!";
 
   static List<ListItem> _generateMocksList() {
     return new List<ListItem>.generate(
@@ -90,6 +94,34 @@ class AboutScreen extends StatelessWidget {
                             child: new Divider(color: Colors.black))),
                   ],
                 ),
+                new Padding(
+                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
+                    child: new Text(
+                      valueDesc1,
+                      textAlign: TextAlign.center,
+                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
+                    )),
+                new Padding(
+                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
+                    child: new Text(
+                      valueDesc2,
+                      textAlign: TextAlign.center,
+                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
+                    )),
+                new Padding(
+                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
+                    child: new Text(
+                      valueDesc3,
+                      textAlign: TextAlign.center,
+                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
+                    )),
+                new Padding(
+                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
+                    child: new Text(
+                      valueDesc4,
+                      textAlign: TextAlign.center,
+                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
+                    )),
               ],
             )));
   }

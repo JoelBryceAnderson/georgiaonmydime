@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7e7bd6-5bb3-41e6-8b12-f8ba90fd907e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lib/widgets/screens/settings/AboutScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/settings/AboutScreen.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="AboutScreen.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/widgets/screens/settings/AboutScreen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="40" />
+            <state relative-caret-position="667">
+              <caret line="120" column="32" lean-forward="false" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -848,8 +847,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/widgets/screens/settings/AboutScreen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="40" />
+        <state relative-caret-position="667">
+          <caret line="120" column="32" lean-forward="false" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
           <folding />
         </state>
       </provider>
