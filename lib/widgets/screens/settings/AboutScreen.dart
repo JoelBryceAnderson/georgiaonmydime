@@ -3,31 +3,34 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/guides/Guide.dart';
 import 'package:georgiaonmydime/data/news/NewsArticle.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
-import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
+import 'package:georgiaonmydime/widgets/lists/AboutList.dart';
+import 'package:georgiaonmydime/widgets/lists/CardList.dart';
 import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({Key key, this.items}) : super(key: key);
 
   final List<ListItem> items;
-  final String aboutDesc1 =
+  static String aboutDesc1 =
       "Georgia on my Dime is Atlanta’s number one site for up-to-date happy hour specials, upcoming events, and local guides. Whether you’re an Atlanta native or new to the city, you’ll be sure to discover great deals and local events!\n\nWe work hard to ensure all of our information is current and accurate. If you notice an error, please let us know, and we will correct it as soon as possible.\n\nIf you are a local business owner and would like to promote your event or restaurant, get in touch with us below and we will get back to you promptly.\n\nCheers!";
-  final String aboutDesc2 = "-Georgia on my Dime";
-  final String valueDesc1 = "By Atlantans, for Atlantans. We love sharing the things that make our city so unique.";
-  final String valueDesc2 = "Our list of Happy Hours and deals in Atlanta ensures that you can have a blast - without breaking the bank.";
-  final String valueDesc3 = "We showcase the best Atlanta has to offer. If we don't have something positive to say, we won't say it at all.";
-  final String valueDesc4 = "Our list of deals and Happy Hours is always growing. Check it out today!";
+  static String aboutDesc2 = "-Georgia on my Dime";
+  static String valueDesc1 = "By Atlantans, for Atlantans. We love sharing the things that make our city so unique.";
+  static String valueDesc2 = "Our list of Happy Hours and deals in Atlanta ensures that you can have a blast - without breaking the bank.";
+  static String valueDesc3 = "We showcase the best Atlanta has to offer. If we don't have something positive to say, we won't say it at all.";
+  static String valueDesc4 = "Our list of deals and Happy Hours is always growing. Check it out today!";
 
-  static List<ListItem> _generateMocksList() {
-    return new List<ListItem>.generate(
-      15,
-      (i) => new GuideItem(new Guide(
-          "Best Bars to Watch Atlanta United Matches",
-          "As we all know, being an Atlanta sports fan can be pretty depressing. After a heartbreaking Super Bowl loss for the Falcons followed by a Georgia Bulldawgs loss in the Nation Championship (played in Atlanta, of course), it seems like the ATL isn’t much of a football town. Lucky for us, there is a third football team that calls Georgia its home.",
-          "https://georgiaonmydime.com/wp-content/uploads/2018/03/atlanta-united-bars-372x240.jpg",
-          "https://georgiaonmydime.com/best-bars-to-watch-atlanta-united-matches/",
-          DateTime.now())),
-    );
+  static List<ListItem> generateAboutList() {
+    var list = new List<ListItem>();
+
+    list.add(new AboutHeaderItem("About Us"));
+    list.add(new AboutDescriptionItem(aboutDesc1, aboutDesc2));
+    list.add(new AboutHeaderItem("Our Values"));
+    list.add(new AboutValueItem(valueDesc1));
+    list.add(new AboutValueItem(valueDesc2));
+    list.add(new AboutValueItem(valueDesc3));
+    list.add(new AboutValueItem(valueDesc4));
+
+    return list;
   }
 
   @override
@@ -40,90 +43,7 @@ class AboutScreen extends StatelessWidget {
   }
 
   Widget buildAboutBodySliver(BuildContext context) {
-    return new SliverFillRemaining(
-        child: new Container(
-            padding: new EdgeInsets.only(
-                top: 32.0, left: 16.0, right: 16.0, bottom: 32.0),
-            child: new Column(
-              children: <Widget>[
-                new Row(
-                  children: <Widget>[
-                    new Expanded(
-                        child: new Padding(
-                            padding:
-                                new EdgeInsets.only(left: 24.0, right: 8.0),
-                            child: new Divider(color: Colors.black))),
-                    new Text("About Us",
-                        style:
-                            new TextStyle(color: Colors.black, fontSize: 24.0)),
-                    new Expanded(
-                        child: new Padding(
-                            padding:
-                                new EdgeInsets.only(left: 8.0, right: 24.0),
-                            child: new Divider(color: Colors.black))),
-                  ],
-                ),
-                new Padding(
-                    padding: new EdgeInsets.only(top: 24.0),
-                    child: new Text(
-                      aboutDesc1,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
-                    )),
-                new Padding(
-                    padding: new EdgeInsets.only(top: 2.0, bottom: 64.0),
-                    child: new Text(
-                      aboutDesc2,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 18.0, color: Colors.black),
-                    )),
-                new Row(
-                  children: <Widget>[
-                    new Expanded(
-                        child: new Padding(
-                            padding:
-                                new EdgeInsets.only(left: 24.0, right: 8.0),
-                            child: new Divider(color: Colors.black))),
-                    new Text("Our Values",
-                        style:
-                            new TextStyle(color: Colors.black, fontSize: 24.0)),
-                    new Expanded(
-                        child: new Padding(
-                            padding:
-                                new EdgeInsets.only(left: 8.0, right: 24.0),
-                            child: new Divider(color: Colors.black))),
-                  ],
-                ),
-                new Padding(
-                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
-                    child: new Text(
-                      valueDesc1,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
-                    )),
-                new Padding(
-                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
-                    child: new Text(
-                      valueDesc2,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
-                    )),
-                new Padding(
-                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
-                    child: new Text(
-                      valueDesc3,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
-                    )),
-                new Padding(
-                    padding: new EdgeInsets.only(top: 24.0, left: 80.0, right: 80.0),
-                    child: new Text(
-                      valueDesc4,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
-                    )),
-              ],
-            )));
+    return new AboutList(items: generateAboutList());
   }
 
   Widget buildAppBarSliver(BuildContext context) {

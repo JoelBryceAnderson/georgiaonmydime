@@ -5,7 +5,7 @@ import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
 import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
-import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
+import 'package:georgiaonmydime/widgets/lists/CardList.dart';
 import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';
 import 'package:latlong/latlong.dart';
 

@@ -44,3 +44,24 @@ class EventCalendarItem implements ListItem {
 
   EventCalendarItem(this.onDateChanged);
 }
+
+class AboutDescriptionItem implements ListItem {
+  final String content1;
+  final String content2;
+
+  AboutDescriptionItem(this.content1, this.content2);
+}
+
+class AboutHeaderItem implements ListItem {
+  final String content;
+
+  AboutHeaderItem(this.content);
+}
+
+class AboutValueItem implements ListItem {
+  final String content;
+
+  AboutValueItem(this.content);
+}
+
+

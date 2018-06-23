@@ -3,7 +3,7 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/events/Event.dart';
 import 'package:georgiaonmydime/data/events/EventVenue.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
-import 'package:georgiaonmydime/widgets/navigation/CardList.dart';
+import 'package:georgiaonmydime/widgets/lists/CardList.dart';
 import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';
 
 class EventsScreen extends StatefulWidget {
