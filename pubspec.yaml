@@ -31,6 +31,7 @@ flutter:
 
   assets:
     - assets/gomd_title.png
+    - assets/gomd_icon.png
 
   fonts:
     - family: Quicksand

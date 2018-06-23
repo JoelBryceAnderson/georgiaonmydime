@@ -6,12 +6,12 @@ class NavigationScreen {
     TickerProvider vsync,
   })  : _screen = screen,
         controller = new AnimationController(
-          duration: kThemeAnimationDuration,
+          duration: new Duration(milliseconds: 400),
           vsync: vsync,
         ) {
     _animation = new CurvedAnimation(
       parent: controller,
-      curve: const Interval(0.5, 1.0, curve: Curves.fastOutSlowIn),
+      curve: const Interval(0.5, 1.0, curve: Curves.bounceInOut),
     );
   }
 
@@ -23,12 +23,7 @@ class NavigationScreen {
       BottomNavigationBarType type, BuildContext context) {
     return new FadeTransition(
       opacity: _animation,
-      child: new SlideTransition(
-          position: new Tween<Offset>(
-            begin: const Offset(0.0, 0.02), // Slightly down.
-            end: Offset.zero,
-          ).animate(_animation),
-          child: _screen),
+      child: _screen,
     );
   }
 }

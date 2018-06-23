@@ -11,6 +11,8 @@ class AddHappyHourScreen extends StatelessWidget {
         children: <Widget>[
           new Image.network(
             "https://georgiaonmydime.com/wp-content/uploads/2018/05/The-Pinewood-Happy-Hours.jpg",
+            height: 150.0,
+            fit: BoxFit.cover,
           ),
           new Padding(
               padding: new EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),

@@ -38,6 +38,9 @@ class HappyHourScreen extends StatelessWidget {
       new SliverAppBar(
           expandedHeight: 164.0,
           pinned: true,
+          leading: new Padding(
+              padding: new EdgeInsets.only(top: 12.0, bottom: 12.0),
+              child: Image.asset("assets/gomd_icon.png")),
           actions: <Widget>[new MenuAction()],
           backgroundColor: GeorgiaColors.ceruleanBlue,
           centerTitle: true,

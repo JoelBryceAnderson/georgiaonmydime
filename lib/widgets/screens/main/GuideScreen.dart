@@ -27,6 +27,10 @@ class GuideScreen extends StatelessWidget {
     return new CustomScrollView(slivers: <Widget>[
       new SliverAppBar(
           floating: true,
+          titleSpacing: 0.0,
+          leading: new Padding(
+              padding: new EdgeInsets.only(top: 12.0, bottom: 12.0),
+              child: Image.asset("assets/gomd_icon.png")),
           actions: <Widget>[new MenuAction()],
           backgroundColor: GeorgiaColors.ceruleanBlue,
           title: new Text("Guides",

@@ -24,9 +24,20 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
         title: 'Georgia On My Dime',
         theme: _appTheme(),
         home: new Scaffold(
-          body: _buildTransitionsStack(),
+          body: new Stack(
+            children: <Widget>[
+              _getProgress(),
+              _buildTransitionsStack(),
+            ],
+          ),
           bottomNavigationBar: _buildBottomBar(),
         ));
+  }
+
+  Widget _getProgress() {
+    return (!_isScreenShowing())
+        ? new Center(child: new CircularProgressIndicator())
+        : new Container();
   }
 
   Widget _buildTransitionsStack() {
@@ -51,7 +62,7 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
     return new ThemeData(
       fontFamily: 'Quicksand',
       // This is the theme of your application.
-      primarySwatch: Colors.grey,
+      primarySwatch: Colors.blue,
     );
   }
 
@@ -97,6 +108,13 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
       view.controller.addListener(_rebuild);
 
     _navigationViews[_page].controller.value = 1.0;
+  }
+
+  bool _isScreenShowing() {
+    for (NavigationScreen view in _navigationViews)
+      if (view.controller.value == 1.0) return true;
+
+    return false;
   }
 
   void _rebuild() {
