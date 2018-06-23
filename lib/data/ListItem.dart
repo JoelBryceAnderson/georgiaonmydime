@@ -60,8 +60,16 @@ class AboutHeaderItem implements ListItem {
 
 class AboutValueItem implements ListItem {
   final String content;
+  final String iconPath;
 
-  AboutValueItem(this.content);
+  AboutValueItem(this.content, this.iconPath);
+}
+
+class AboutButtonItem implements ListItem {
+  final String content;
+  final VoidCallback onPressed;
+
+  AboutButtonItem(this.content, this.onPressed);
 }
 
 

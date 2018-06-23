@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
+import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 
 class AboutList extends StatefulWidget {
   const AboutList({Key key, this.items}) : super(key: key);
@@ -24,10 +25,25 @@ class _AboutListState extends State<AboutList> {
       return buildDescription(item);
     } else if (item is AboutValueItem) {
       return buildValue(item);
+    } else if (item is AboutButtonItem) {
+      return buildButton(item);
     }
 
     return new ListTile(
         title: new Text("Error", style: Theme.of(context).textTheme.headline));
+  }
+
+  Widget buildButton(AboutButtonItem item) {
+    return new ListTile(
+        title: new Padding(
+            padding: new EdgeInsets.only(left: 24.0, right: 24.0),
+            child: new MaterialButton(
+                padding: new EdgeInsets.all(8.0),
+                onPressed: item.onPressed,
+                child: new Text(item.content,
+                    style: new TextStyle(fontSize: 18.0)),
+                color: GeorgiaColors.ceruleanBlue,
+                textColor: Colors.white)));
   }
 
   Widget buildHeader(AboutHeaderItem item) {
@@ -77,11 +93,18 @@ class _AboutListState extends State<AboutList> {
   Widget buildValue(AboutValueItem item) {
     return new ListTile(
         title: new Padding(
-            padding: new EdgeInsets.only(top: 12.0, left: 80.0, right: 80.0, bottom: 12.0),
-            child: new Text(
-              item.content,
-              textAlign: TextAlign.center,
-              style: new TextStyle(fontSize: 14.0, color: Colors.black),
+            padding: new EdgeInsets.only(
+                top: 24.0, left: 80.0, right: 80.0, bottom: 12.0),
+            child: new Column(
+              children: <Widget>[
+                new Image.asset(item.iconPath, height: 72.0),
+                new Padding(
+                    padding: new EdgeInsets.only(top: 8.0),
+                    child: new Text(item.content,
+                        textAlign: TextAlign.center,
+                        style: new TextStyle(
+                            fontSize: 14.0, color: Colors.black))),
+              ],
             )));
   }
 
