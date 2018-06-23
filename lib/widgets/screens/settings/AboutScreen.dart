@@ -101,14 +101,9 @@ class AboutScreen extends StatelessWidget {
         backgroundColor: GeorgiaColors.ceruleanBlue,
         expandedHeight: 190.0,
         flexibleSpace: new FlexibleSpaceBar(
-            background: new Container(
-                decoration: const BoxDecoration(
-          image: const DecorationImage(
-            fit: BoxFit.cover,
-            image: NetworkImage(
-                "https://georgiaonmydime.com/wp-content/uploads/2018/05/Thrive-Happy-Hour.jpg"),
-          ),
-        ))),
+            background: new Image.network(
+                "https://georgiaonmydime.com/wp-content/uploads/2018/05/Thrive-Happy-Hour.jpg",
+                fit: BoxFit.cover)),
         leading: new IconButton(
             color: Colors.white,
             icon: new Icon(Icons.arrow_back),
