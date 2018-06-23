@@ -19,6 +19,7 @@ class _MainAppState extends State<MainApp> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    MaterialPageRoute.debugEnableFadingRoutes = true; // todo REMOVE THIS!!!
     return new MaterialApp(
         title: 'Georgia On My Dime',
         theme: _appTheme(),
