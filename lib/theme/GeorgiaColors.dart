@@ -22,4 +22,14 @@ class GeorgiaColors {
       900: const Color(0xFF1c70b5)
     },
   );
+
+  static const _dimeGrayPrimary = 0xFF5c5d5d;
+
+  static const MaterialColor dimeGray = const MaterialColor(
+    _dimeGrayPrimary,
+    const <int, Color>{
+      900:  const Color(0xFF5c5d5d),
+    },
+  );
+
 }
