@@ -20,10 +20,10 @@ class AboutScreen extends StatelessWidget {
     final ios = (Theme.of(context).platform == TargetPlatform.iOS);
     var platform = ios ? "iOS" : "Android";
 
-    list.add(new AboutHeaderItem("About Us"));
+    list.add(new HeadingItem("About Us"));
     list.add(new AboutDescriptionItem(aboutDesc1, aboutDesc2));
-    list.add(new AboutButtonItem("Contact Us", () => launch("mailto:georgiaonmydime@gmail.com?subject=Georgia+On+My+Dime+Feedback+($platform)")));
-    list.add(new AboutHeaderItem("Our Values"));
+    list.add(new ButtonItem("Contact Us", () => launch("mailto:georgiaonmydime@gmail.com?subject=Georgia+On+My+Dime+Feedback+($platform)")));
+    list.add(new HeadingItem("Our Values"));
     list.add(new AboutValueItem(valueDesc1, "assets/gomd_icon.png"));
     list.add(new AboutValueItem(valueDesc2, "assets/gomd_icon.png"));
     list.add(new AboutValueItem(valueDesc3, "assets/gomd_icon.png"));

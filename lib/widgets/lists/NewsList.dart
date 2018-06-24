@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 
-class AboutList extends StatefulWidget {
-  const AboutList({Key key, this.items}) : super(key: key);
+class NewsList extends StatefulWidget {
+  const NewsList({Key key, this.items}) : super(key: key);
 
   final List<ListItem> items;
 
   @override
-  State<StatefulWidget> createState() => new _AboutListState(items);
+  State<StatefulWidget> createState() => new _NewsListState(items);
 }
 
-class _AboutListState extends State<AboutList> {
-  _AboutListState(this.items);
+class _NewsListState extends State<NewsList> {
+  _NewsListState(this.items);
 
   final List<ListItem> items;
 
@@ -21,10 +21,8 @@ class _AboutListState extends State<AboutList> {
 
     if (item is HeadingItem) {
       return buildHeader(item);
-    } else if (item is AboutDescriptionItem) {
+    } else if (item is BodyItem) {
       return buildDescription(item);
-    } else if (item is AboutValueItem) {
-      return buildValue(item);
     } else if (item is ButtonItem) {
       return buildButton(item);
     }
@@ -36,11 +34,12 @@ class _AboutListState extends State<AboutList> {
   Widget buildButton(ButtonItem item) {
     return new ListTile(
         title: new Padding(
-            padding: new EdgeInsets.only(left: 24.0, right: 24.0),
+            padding: new EdgeInsets.only(left: 12.0, right: 12.0),
             child: new MaterialButton(
                 padding: new EdgeInsets.all(8.0),
                 onPressed: item.onPressed,
                 child: new Text(item.content,
+                    textAlign: TextAlign.center,
                     style: new TextStyle(fontSize: 18.0)),
                 color: GeorgiaColors.ceruleanBlue,
                 textColor: Colors.white)));
@@ -50,48 +49,24 @@ class _AboutListState extends State<AboutList> {
     return new ListTile(
         title: new Padding(
             padding: new EdgeInsets.only(top: 24.0),
-            child: new Row(
-              children: <Widget>[
-                new Expanded(
-                    child: new Padding(
-                        padding: new EdgeInsets.only(left: 24.0, right: 8.0),
-                        child: new Divider(color: Colors.black))),
-                new Text(item.heading,
-                    style: new TextStyle(
-                        color: Colors.black,
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.bold)),
-                new Expanded(
-                    child: new Padding(
-                        padding: new EdgeInsets.only(left: 8.0, right: 24.0),
-                        child: new Divider(color: Colors.black))),
-              ],
-            )));
+            child: new Text(item.heading,
+                textAlign: TextAlign.center,
+                style: new TextStyle(
+                    color: Colors.black,
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold))));
   }
 
-  Widget buildDescription(AboutDescriptionItem item) {
+  Widget buildDescription(BodyItem item) {
     return new ListTile(
         title: new Container(
-            padding: new EdgeInsets.only(left: 16.0, right: 16.0),
             child: new Column(
               children: <Widget>[
                 new Padding(
                     padding: new EdgeInsets.only(top: 12.0),
-                    child: new Text(
-                      item.content1,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 14.0, color: Colors.black),
-                    )),
-                new Padding(
-                    padding: new EdgeInsets.only(top: 2.0, bottom: 24.0),
-                    child: new Text(
-                      item.content2,
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(
-                          fontSize: 18.0,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                    ))
+                    child: new Text(item.body,
+                        style:
+                            new TextStyle(fontSize: 14.0, color: Colors.black)))
               ],
             )));
   }

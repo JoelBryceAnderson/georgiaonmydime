@@ -21,8 +21,11 @@ class AppBarBottom extends StatelessWidget {
                     child: new Padding(
                         padding: new EdgeInsets.only(left: 24.0, right: 8.0),
                         child: new Divider(color: Colors.white))),
-                new Text("Monday",
-                    style: new TextStyle(color: Colors.white, fontSize: 24.0)),
+                new Text(getDayOfWeek(),
+                    style: new TextStyle(
+                        color: Colors.white,
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold)),
                 new Expanded(
                     child: new Padding(
                         padding: new EdgeInsets.only(left: 8.0, right: 24.0),
@@ -31,5 +34,33 @@ class AppBarBottom extends StatelessWidget {
             )
           ],
         ));
+  }
+
+  String getDayOfWeek() {
+    switch (DateTime.now().weekday) {
+      case 1:
+        return "Monday";
+        break;
+      case 2:
+        return "Tuesday";
+        break;
+      case 3:
+        return "Wednesday";
+        break;
+      case 4:
+        return "Thursday";
+        break;
+      case 5:
+        return "Friday";
+        break;
+      case 6:
+        return "Saturday";
+        break;
+      case 7:
+        return "Sunday";
+        break;
+    }
+
+    return "John Cena";
   }
 }

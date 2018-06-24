@@ -3,6 +3,7 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/news/NewsArticle.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/lists/AboutList.dart';
+import 'package:georgiaonmydime/widgets/lists/NewsList.dart';
 import 'package:share/share.dart';
 
 class NewsDetailScreen extends StatelessWidget {
@@ -10,11 +11,11 @@ class NewsDetailScreen extends StatelessWidget {
 
   final NewsArticle article;
 
-  List<ListItem> generateAboutList(BuildContext context) {
+  List<ListItem> generateDetailList(BuildContext context) {
     var list = new List<ListItem>();
 
     list.add(new HeadingItem(article.title));
-    list.add(new AboutDescriptionItem(article.description, ""));
+    list.add(new BodyItem(article.description));
     return list;
   }
 
@@ -27,12 +28,12 @@ class NewsDetailScreen extends StatelessWidget {
     return new Material(
         child: new CustomScrollView(slivers: <Widget>[
       buildAppBarSliver(context),
-      buildAboutBodySliver(context)
+      buildBodySliver(context)
     ]));
   }
 
-  Widget buildAboutBodySliver(BuildContext context) {
-    return new AboutList(items: generateAboutList(context));
+  Widget buildBodySliver(BuildContext context) {
+    return new NewsList(items: generateDetailList(context));
   }
 
   Widget buildAppBarSliver(BuildContext context) {
