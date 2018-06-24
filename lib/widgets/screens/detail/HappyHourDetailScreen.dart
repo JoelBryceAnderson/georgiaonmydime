@@ -3,6 +3,7 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/lists/AboutList.dart';
+import 'package:georgiaonmydime/widgets/lists/NewsList.dart';
 import 'package:share/share.dart';
 
 class HappyHourDetailScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class HappyHourDetailScreen extends StatelessWidget {
     var list = new List<ListItem>();
 
     list.add(new HeadingItem(happyHour.title));
-    list.add(new AboutDescriptionItem(happyHour.description, ""));
+    list.add(new BodyItem(happyHour.description));
     return list;
   }
 
@@ -32,7 +33,7 @@ class HappyHourDetailScreen extends StatelessWidget {
   }
 
   Widget buildAboutBodySliver(BuildContext context) {
-    return new AboutList(items: generateAboutList(context));
+    return new NewsList(items: generateAboutList(context));
   }
 
   Widget buildAppBarSliver(BuildContext context) {

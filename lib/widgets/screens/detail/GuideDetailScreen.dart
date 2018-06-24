@@ -3,6 +3,7 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/guides/Guide.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/lists/AboutList.dart';
+import 'package:georgiaonmydime/widgets/lists/NewsList.dart';
 import 'package:share/share.dart';
 
 class GuideDetailScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class GuideDetailScreen extends StatelessWidget {
     var list = new List<ListItem>();
 
     list.add(new HeadingItem(guide.title));
-    list.add(new AboutDescriptionItem(guide.description, ""));
+    list.add(new BodyItem(guide.description));
     return list;
   }
 
@@ -32,7 +33,7 @@ class GuideDetailScreen extends StatelessWidget {
   }
 
   Widget buildAboutBodySliver(BuildContext context) {
-    return new AboutList(items: generateAboutList(context));
+    return new NewsList(items: generateAboutList(context));
   }
 
   Widget buildAppBarSliver(BuildContext context) {
