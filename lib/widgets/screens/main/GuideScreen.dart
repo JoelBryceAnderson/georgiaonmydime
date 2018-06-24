@@ -18,7 +18,7 @@ class GuideScreen extends StatelessWidget {
           "As we all know, being an Atlanta sports fan can be pretty depressing. After a heartbreaking Super Bowl loss for the Falcons followed by a Georgia Bulldawgs loss in the Nation Championship (played in Atlanta, of course), it seems like the ATL isn’t much of a football town. Lucky for us, there is a third football team that calls Georgia its home.",
           "https://georgiaonmydime.com/wp-content/uploads/2018/03/atlanta-united-bars-372x240.jpg",
           "https://georgiaonmydime.com/best-bars-to-watch-atlanta-united-matches/",
-          DateTime.now())),
+          "April 23, 2018")),
     );
   }
 

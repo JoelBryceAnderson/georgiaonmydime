@@ -25,10 +25,27 @@ class _NewsListState extends State<NewsList> {
       return buildDescription(item);
     } else if (item is ButtonItem) {
       return buildButton(item);
+    } else if (item is DateItem) {
+      return buildDate(item);
     }
 
     return new ListTile(
         title: new Text("Error", style: Theme.of(context).textTheme.headline));
+  }
+
+  Widget buildDate(DateItem item) {
+    return new Padding(
+        padding: new EdgeInsets.only(top: 12.0, left: 16.0),
+        child: new Row(children: <Widget>[
+          new Container(
+              margin: new EdgeInsets.only(right: 8.0),
+              child: new Icon(
+                Icons.calendar_today,
+                color: Colors.grey,
+                size: 16.0,
+              )),
+          new Text(item.date, style: new TextStyle(color: Colors.grey, fontSize: 12.0))
+        ]));
   }
 
   Widget buildButton(ButtonItem item) {
@@ -61,14 +78,13 @@ class _NewsListState extends State<NewsList> {
     return new ListTile(
         title: new Container(
             child: new Column(
-              children: <Widget>[
-                new Padding(
-                    padding: new EdgeInsets.only(top: 12.0),
-                    child: new Text(item.body,
-                        style:
-                            new TextStyle(fontSize: 14.0, color: Colors.black)))
-              ],
-            )));
+      children: <Widget>[
+        new Padding(
+            padding: new EdgeInsets.only(top: 12.0),
+            child: new Text(item.body,
+                style: new TextStyle(fontSize: 14.0, color: Colors.black)))
+      ],
+    )));
   }
 
   Widget buildValue(AboutValueItem item) {

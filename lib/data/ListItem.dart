@@ -69,3 +69,9 @@ class AboutValueItem implements ListItem {
 
   AboutValueItem(this.content, this.iconPath);
 }
+
+class DateItem implements ListItem {
+  final String date;
+
+  DateItem(this.date);
+}

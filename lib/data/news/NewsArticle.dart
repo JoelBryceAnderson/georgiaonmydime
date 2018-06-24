@@ -4,7 +4,7 @@ class NewsArticle {
   final String description;
   final String imageUrl;
   final String articleUrl;
-  final DateTime published;
+  final String published;
 
   NewsArticle(this.title, this.description, this.imageUrl, this.articleUrl,
       this.published);

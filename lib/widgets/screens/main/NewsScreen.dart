@@ -18,7 +18,7 @@ class NewsScreen extends StatelessWidget {
           "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
           "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
           "https://georgiaonmydime.com/publico-kitchen-tap-now-open-in-midtown/",
-          DateTime.now())),
+          "April 23, 2018")),
     );
   }
 

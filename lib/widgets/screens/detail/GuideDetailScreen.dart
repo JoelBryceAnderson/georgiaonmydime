@@ -15,6 +15,7 @@ class GuideDetailScreen extends StatelessWidget {
     var list = new List<ListItem>();
 
     list.add(new HeadingItem(guide.title));
+    list.add(new DateItem(guide.published));
     list.add(new BodyItem(guide.description));
     return list;
   }

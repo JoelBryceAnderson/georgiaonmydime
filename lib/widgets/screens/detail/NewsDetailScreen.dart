@@ -15,6 +15,7 @@ class NewsDetailScreen extends StatelessWidget {
     var list = new List<ListItem>();
 
     list.add(new HeadingItem(article.title));
+    list.add(new DateItem(article.published));
     list.add(new BodyItem(article.description));
     return list;
   }
