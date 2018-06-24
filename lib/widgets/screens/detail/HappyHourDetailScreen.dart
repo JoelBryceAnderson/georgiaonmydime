@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
-import 'package:georgiaonmydime/widgets/lists/AboutList.dart';
+import 'package:georgiaonmydime/widgets/happyhour/BookmarkedIcon.dart';
 import 'package:georgiaonmydime/widgets/lists/NewsList.dart';
 import 'package:share/share.dart';
 
@@ -46,7 +46,8 @@ class HappyHourDetailScreen extends StatelessWidget {
           new IconButton(
               color: Colors.white,
               icon: new Icon(Icons.share),
-              onPressed: () => shareArticle(context))
+              onPressed: () => shareArticle(context)),
+          new BookmarkedIcon(happyHour: happyHour, outlineColor: Colors.white)
         ],
         flexibleSpace: new FlexibleSpaceBar(
             background:
