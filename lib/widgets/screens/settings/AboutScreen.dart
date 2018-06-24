@@ -8,7 +8,7 @@ class AboutScreen extends StatelessWidget {
   const AboutScreen({Key key}) : super(key: key);
 
   final String aboutDesc1 =
-      "Georgia on my Dime is Atlanta’s number one site for up-to-date happy hour specials, upcoming events, and local guides. Whether you’re an Atlanta native or new to the city, you’ll be sure to discover great deals and local events!\n\nWe work hard to ensure all of our information is current and accurate. If you notice an error, please let us know, and we will correct it as soon as possible.\n\nIf you are a local business owner and would like to promote your event or restaurant, get in touch with us below and we will get back to you promptly.\n\nCheers!";
+      "Georgia on my Dime is Atlanta’s number one spot for up-to-date happy hour specials, upcoming events, and local guides. Whether you’re an Atlanta native or new to the city, you’ll be sure to discover great deals and local events!\n\nWe work hard to ensure all of our information is current and accurate. If you notice an error, please let us know, and we will correct it as soon as possible.\n\nIf you are a local business owner and would like to promote your event or restaurant, get in touch with us below and we will get back to you promptly.\n\nCheers!";
   final String aboutDesc2 = "-Georgia on my Dime";
   final String valueDesc1 =
       "By Atlantans, for Atlantans. We love sharing the things that make our city so unique.";

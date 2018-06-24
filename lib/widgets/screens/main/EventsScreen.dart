@@ -16,10 +16,10 @@ class EventsScreen extends StatefulWidget {
 }
 
 class _EventState extends State<EventsScreen> {
-  _EventState(this.items);
+  _EventState(this._items);
 
-  final List<ListItem> items;
-  String day = "Today";
+  final List<ListItem> _items;
+  DateTime _date;
 
   List<ListItem> _generateMocksList() {
     return new List<ListItem>.generate(15, (i) => createListItem(i));
@@ -28,10 +28,10 @@ class _EventState extends State<EventsScreen> {
   ListItem createListItem(int index) {
     switch (index) {
       case 0:
-        return new EventCalendarItem(onDateChanged());
+        return new EventCalendarItem(_onDateChanged());
         break;
       case 1:
-        return new HeadingItem(day);
+        return new HeadingItem("Date Here");
         break;
       default:
         return new EventItem(new Event(
@@ -50,13 +50,13 @@ class _EventState extends State<EventsScreen> {
     }
   }
 
-  ValueChanged<DateTime> onDateChanged() {
-    return (dateTime) => onNewDateSet(dateTime);
+  ValueChanged<DateTime> _onDateChanged() {
+    return (dateTime) => _onNewDateSet(dateTime);
   }
 
-  void onNewDateSet(DateTime dateTime) {
+  void _onNewDateSet(DateTime dateTime) {
     setState(() {
-      day = dateTime.toString();
+      _date = dateTime;
     });
   }
 

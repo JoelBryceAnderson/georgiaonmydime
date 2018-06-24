@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     animationController = new AnimationController(
-        duration: Duration(milliseconds: 700), vsync: this)
+        duration: Duration(milliseconds: 600), vsync: this)
       ..forward()
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {

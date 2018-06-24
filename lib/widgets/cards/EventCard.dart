@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/events/Event.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:georgiaonmydime/widgets/screens/detail/EventsDetailScreen.dart';
 
 class EventCard extends StatelessWidget {
   const EventCard({Key key, this.event}) : super(key: key);
 
   final Event event;
 
-  void _openLink() {
-    launch(event.eventUrl);
+  void _openEventDetail(BuildContext context) {
+    Navigator.push(
+        context,
+        new MaterialPageRoute(
+            builder: (context) => EventDetailScreen(event: event)));
   }
 
   void _addToCalendar() {}
@@ -53,7 +56,7 @@ class EventCard extends StatelessWidget {
                     ],
                   ),
                   new Container(
-                      margin: new EdgeInsets.only(top:4.0),
+                      margin: new EdgeInsets.only(top: 4.0),
                       child: new Text(event.description,
                           style: Theme.of(context).textTheme.body1))
                 ],
@@ -61,7 +64,7 @@ class EventCard extends StatelessWidget {
             ),
             new MaterialButton(
                 padding: new EdgeInsets.all(8.0),
-                onPressed: _openLink,
+                onPressed: () => _openEventDetail(context),
                 child:
                     new Text("Read More", style: new TextStyle(fontSize: 18.0)),
                 color: GeorgiaColors.ceruleanBlue,
