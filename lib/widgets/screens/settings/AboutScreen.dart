@@ -10,10 +10,14 @@ class AboutScreen extends StatelessWidget {
   final String aboutDesc1 =
       "Georgia on my Dime is Atlanta’s number one site for up-to-date happy hour specials, upcoming events, and local guides. Whether you’re an Atlanta native or new to the city, you’ll be sure to discover great deals and local events!\n\nWe work hard to ensure all of our information is current and accurate. If you notice an error, please let us know, and we will correct it as soon as possible.\n\nIf you are a local business owner and would like to promote your event or restaurant, get in touch with us below and we will get back to you promptly.\n\nCheers!";
   final String aboutDesc2 = "-Georgia on my Dime";
-  final String valueDesc1 = "By Atlantans, for Atlantans. We love sharing the things that make our city so unique.";
-  final String valueDesc2 = "Our list of Happy Hours and deals in Atlanta ensures that you can have a blast - without breaking the bank.";
-  final String valueDesc3 = "We showcase the best Atlanta has to offer. If we don't have something positive to say, we won't say it at all.";
-  final String valueDesc4 = "Our list of deals and Happy Hours is always growing. Check it out today!";
+  final String valueDesc1 =
+      "By Atlantans, for Atlantans. We love sharing the things that make our city so unique.";
+  final String valueDesc2 =
+      "Our list of Happy Hours and deals in Atlanta ensures that you can have a blast - without breaking the bank.";
+  final String valueDesc3 =
+      "We showcase the best Atlanta has to offer. If we don't have something positive to say, we won't say it at all.";
+  final String valueDesc4 =
+      "Our list of deals and Happy Hours is always growing. Check it out today!";
 
   List<ListItem> generateAboutList(BuildContext context) {
     var list = new List<ListItem>();
@@ -22,7 +26,10 @@ class AboutScreen extends StatelessWidget {
 
     list.add(new HeadingItem("About Us"));
     list.add(new AboutDescriptionItem(aboutDesc1, aboutDesc2));
-    list.add(new ButtonItem("Contact Us", () => launch("mailto:georgiaonmydime@gmail.com?subject=Georgia+On+My+Dime+Feedback+($platform)")));
+    list.add(new ButtonItem(
+        "Contact Us",
+        () => launch(
+            "mailto:georgiaonmydime@gmail.com?subject=Georgia+On+My+Dime+Feedback+($platform)")));
     list.add(new HeadingItem("Our Values"));
     list.add(new AboutValueItem(valueDesc1, "assets/gomd_icon.png"));
     list.add(new AboutValueItem(valueDesc2, "assets/gomd_icon.png"));
@@ -52,6 +59,10 @@ class AboutScreen extends StatelessWidget {
         backgroundColor: GeorgiaColors.ceruleanBlue,
         expandedHeight: 190.0,
         flexibleSpace: new FlexibleSpaceBar(
+            centerTitle: true,
+            title: new Padding(
+                padding: new EdgeInsets.only(bottom: 16.0),
+                child: new Image.asset("assets/gomd_icon.png", height: 72.0)),
             background: new Image.network(
                 "https://georgiaonmydime.com/wp-content/uploads/2018/05/Thrive-Happy-Hour.jpg",
                 fit: BoxFit.cover)),
