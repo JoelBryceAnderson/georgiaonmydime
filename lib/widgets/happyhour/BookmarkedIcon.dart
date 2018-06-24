@@ -20,8 +20,8 @@ class _BookmarkState extends State<BookmarkedIcon> {
   Widget build(BuildContext context) {
     return new IconButton(
         icon: new Icon(
-            _happyHour.saved ? Icons.bookmark : Icons.bookmark_border,
-            color: GeorgiaColors.ceruleanBlue),
+            _happyHour.saved ? Icons.favorite : Icons.favorite_border,
+            color: _happyHour.saved ? Colors.red : Colors.black),
         onPressed: _onClicked);
   }
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/widgets/happyhour/BookmarkedIcon.dart';
 import 'package:georgiaonmydime/widgets/happyhour/OpenStatusText.dart';
+import 'package:georgiaonmydime/widgets/screens/detail/HappyHourDetailScreen.dart';
 import 'package:meta/meta.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -31,8 +32,11 @@ class HappyHourCard extends StatelessWidget {
     }
   }
 
-  _openDetailScreen() {
-    launch(happyHour.happyHourUrl);
+  _openDetailScreen(BuildContext context) {
+    Navigator.push(
+        context,
+        new MaterialPageRoute(
+            builder: (context) => HappyHourDetailScreen(happyHour: happyHour)));
   }
 
   @override
@@ -43,7 +47,7 @@ class HappyHourCard extends StatelessWidget {
             new EdgeInsets.only(left: 16.0, right: 16.0, top: 8.0, bottom: 8.0),
         child: new FlatButton(
             padding: new EdgeInsets.all(0.0),
-            onPressed: _openDetailScreen,
+            onPressed: () => _openDetailScreen(context),
             child: new Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
