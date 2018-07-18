@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/ListItem.dart';
-import 'package:georgiaonmydime/data/news/NewsArticle.dart';
+import 'package:georgiaonmydime/data/posts/NewsArticle.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
 import 'package:georgiaonmydime/widgets/lists/CardList.dart';
 import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';

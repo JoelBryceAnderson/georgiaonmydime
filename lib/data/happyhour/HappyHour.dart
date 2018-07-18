@@ -25,4 +25,8 @@ class HappyHour {
       this.openStatus,
       this.latLng,
       this.saved);
+
+  static fromJson(json) {
+
+  }
 }

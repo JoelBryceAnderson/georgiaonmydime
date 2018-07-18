@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:georgiaonmydime/data/events/Event.dart';
-import 'package:georgiaonmydime/data/guides/Guide.dart';
+import 'package:georgiaonmydime/data/posts/Guide.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
-import 'package:georgiaonmydime/data/news/NewsArticle.dart';
+import 'package:georgiaonmydime/data/posts/NewsArticle.dart';
 
 // The base class for the different types of items the List can contain
 abstract class ListItem {}

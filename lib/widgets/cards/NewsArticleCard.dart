@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:georgiaonmydime/data/news/NewsArticle.dart';
+import 'package:georgiaonmydime/data/posts/NewsArticle.dart';
 import 'package:georgiaonmydime/widgets/screens/detail/NewsDetailScreen.dart';
 
 class NewsArticleCard extends StatelessWidget {

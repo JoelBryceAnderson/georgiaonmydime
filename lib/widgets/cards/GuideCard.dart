@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:georgiaonmydime/data/guides/Guide.dart';
+import 'package:georgiaonmydime/data/posts/Guide.dart';
 import 'package:georgiaonmydime/widgets/screens/detail/GuideDetailScreen.dart';
 
 class GuideCard extends StatelessWidget {

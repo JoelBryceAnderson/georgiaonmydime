@@ -24,4 +24,6 @@ class Event {
       this.category,
       this.tags,
       this.eventVenue);
+
+  static fromJson(json) {}
 }
