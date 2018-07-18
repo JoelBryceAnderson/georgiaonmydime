@@ -25,5 +25,18 @@ class Event {
       this.tags,
       this.eventVenue);
 
-  static fromJson(json) {}
+  factory Event.fromJson(Map<String, dynamic> json) {
+    return Event(
+      json['title'] as String,
+      json['description'] as String,
+      json['imageUrl'] as String,
+      json['eventUrl'] as String,
+      json['directions'] as String,
+      json['date'] as String,
+      json['time'] as String,
+      json['category'] as String,
+      json['tags'] as List<String>,
+      EventVenue("", "", ""),
+    );
+  }
 }

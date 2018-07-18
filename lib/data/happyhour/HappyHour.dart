@@ -10,8 +10,8 @@ class HappyHour {
   final String happyHourUrl;
   final String imageUrl;
   final String neighborhood;
-  final LatLng latLng;
   final OpenStatus openStatus;
+  final LatLng latLng;
 
   bool saved;
 
@@ -26,7 +26,16 @@ class HappyHour {
       this.latLng,
       this.saved);
 
-  static fromJson(json) {
-
+  factory HappyHour.fromJson(Map<String, dynamic> json) {
+    return HappyHour(
+        Weekday.monday,
+        json['title'] as String,
+        json['description'] as String,
+        json['happyHourUrl'] as String,
+        json['imageUrl'] as String,
+        json['neighborhood'] as String,
+        json['openStatus'] as OpenStatus,
+        json['latLng'] as LatLng,
+        false);
   }
 }
