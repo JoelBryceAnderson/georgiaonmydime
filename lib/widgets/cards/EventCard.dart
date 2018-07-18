@@ -38,26 +38,6 @@ class EventCard extends StatelessWidget {
                     children: <Widget>[
                       new Text(event.title,
                           style: Theme.of(context).textTheme.title),
-                      new Row(
-                        children: <Widget>[
-                          new Expanded(
-                              child: new FlatButton(
-                                  onPressed: _addToCalendar,
-                                  padding: new EdgeInsets.all(0.0),
-                                  child: new Row(children: <Widget>[
-                                    new Container(
-                                        margin: new EdgeInsets.only(right: 4.0),
-                                        child: new Icon(
-                                          Icons.access_time,
-                                          color: Colors.black45,
-                                          size: 16.0,
-                                        )),
-                                    new Text(event.time,
-                                        style:
-                                            Theme.of(context).textTheme.body1)
-                                  ]))),
-                        ],
-                      ),
                       new Container(
                           margin: new EdgeInsets.only(top: 4.0),
                           child: new Text(event.description,
@@ -67,18 +47,26 @@ class EventCard extends StatelessWidget {
                 ),
                 new Divider(height: 4.0, color: Colors.grey),
                 new Container(
-                  margin: new EdgeInsets.all(12.0),
-                  child: new Row(children: <Widget>[
-                    new Container(
-                        margin: new EdgeInsets.only(right: 4.0),
-                        child: new Icon(
-                          Icons.calendar_today,
-                          color: Colors.black45,
-                          size: 16.0,
-                        )),
-                    new Text(event.date,
-                        style: Theme.of(context).textTheme.body1)
-                  ]),
+                  margin: new EdgeInsets.all(4.0),
+                  child: new Row(
+                    children: <Widget>[
+                      new Expanded(
+                          child: new FlatButton(
+                              onPressed: _addToCalendar,
+                              padding: new EdgeInsets.all(0.0),
+                              child: new Row(children: <Widget>[
+                                new Container(
+                                    margin: new EdgeInsets.only(right: 4.0, left: 4.0),
+                                    child: new Icon(
+                                      Icons.access_time,
+                                      color: Colors.black45,
+                                      size: 16.0,
+                                    )),
+                                new Text(event.time,
+                                    style: Theme.of(context).textTheme.body1)
+                              ]))),
+                    ],
+                  ),
                 )
               ],
             )));

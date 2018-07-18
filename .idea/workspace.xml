@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7e7bd6-5bb3-41e6-8b12-f8ba90fd907e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/data/ListItem.dart" afterPath="$PROJECT_DIR$/lib/data/ListItem.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/data/events/Event.dart" afterPath="$PROJECT_DIR$/lib/data/events/Event.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/data/guides/Guide.dart" afterPath="$PROJECT_DIR$/lib/data/posts/Guide.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/data/happyhour/HappyHour.dart" afterPath="$PROJECT_DIR$/lib/data/happyhour/HappyHour.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/data/news/NewsArticle.dart" afterPath="$PROJECT_DIR$/lib/data/posts/NewsArticle.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/cards/GuideCard.dart" afterPath="$PROJECT_DIR$/lib/widgets/cards/GuideCard.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/cards/NewsArticleCard.dart" afterPath="$PROJECT_DIR$/lib/widgets/cards/NewsArticleCard.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/detail/GuideDetailScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/detail/GuideDetailScreen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/detail/NewsDetailScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/detail/NewsDetailScreen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/main/GuideScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/main/GuideScreen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/main/NewsScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/main/NewsScreen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/screens/settings/SettingsScreen.dart" afterPath="$PROJECT_DIR$/lib/widgets/screens/settings/SettingsScreen.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/network/APIReceiver.dart" afterPath="$PROJECT_DIR$/lib/network/APIReceiver.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/cards/EventCard.dart" afterPath="$PROJECT_DIR$/lib/widgets/cards/EventCard.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -33,51 +22,17 @@
         <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/MainPagerScreen.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="870">
-              <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+              <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/data/events/Event.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="APIService.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/network/APIService.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="APIReceiver.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/network/APIReceiver.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Post.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Post.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/data/posts/Post.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="17" />
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -98,6 +53,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
               <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventCard.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/widgets/cards/EventCard.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="58" column="85" lean-forward="false" selection-start-line="58" selection-start-column="85" selection-end-line="58" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -202,13 +167,13 @@
         <option value="$PROJECT_DIR$/lib/widgets/lists/NewsList.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/cards/GuideCard.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/cards/NewsArticleCard.dart" />
-        <option value="$PROJECT_DIR$/lib/widgets/cards/EventCard.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/cards/HappyHourCard.dart" />
         <option value="$PROJECT_DIR$/lib/network/APIService.dart" />
         <option value="$PROJECT_DIR$/lib/data/happyhour/HappyHour.dart" />
         <option value="$PROJECT_DIR$/lib/data/events/Event.dart" />
-        <option value="$PROJECT_DIR$/lib/network/APIReceiver.dart" />
         <option value="$PROJECT_DIR$/lib/data/posts/Post.dart" />
+        <option value="$PROJECT_DIR$/lib/network/APIReceiver.dart" />
+        <option value="$PROJECT_DIR$/lib/widgets/cards/EventCard.dart" />
       </list>
     </option>
   </component>
@@ -255,21 +220,20 @@
               <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
               <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="georgiaonmydime" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="georgiaonmydime" type="b2602c69:ProjectViewProjectNode" />
@@ -423,6 +387,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -432,7 +397,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23337364" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23337364" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -755,7 +720,7 @@
         <state relative-caret-position="75">
           <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,22 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/cards/EventCard.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/MainPagerScreen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -829,7 +778,7 @@
         <state relative-caret-position="150">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
-            <element signature="e#0#10754#0" expanded="true" />
+            <element signature="e#0#10754#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,7 +788,7 @@
         <state relative-caret-position="345">
           <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding>
-            <element signature="e#0#7234#0" expanded="true" />
+            <element signature="e#0#7234#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -860,6 +809,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/data/posts/Post.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/network/APIReceiver.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/network/APIService.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -872,26 +839,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/data/events/Event.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/network/APIReceiver.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widgets/screens/main/MainPagerScreen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="870">
+          <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/data/posts/Post.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widgets/cards/EventCard.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="414">
+          <caret line="58" column="85" lean-forward="false" selection-start-line="58" selection-start-column="85" selection-end-line="58" selection-end-column="85" />
           <folding />
         </state>
       </provider>

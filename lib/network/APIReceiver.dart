@@ -36,8 +36,9 @@ class APIReceiver {
   Future<List<HappyHour>> happyHours(http.Client client) async {
     final response = await service.fetchHappyHours(client);
 
-    return compute(parsePosts, response.body);
+    return compute(parseHappyHour, response.body);
   }
+
   //endregion happy hour
 
   //region events
@@ -50,7 +51,7 @@ class APIReceiver {
   Future<List<Event>> events(http.Client client) async {
     final response = await service.fetchHappyHours(client);
 
-    return compute(parsePosts, response.body);
+    return compute(parseEvent, response.body);
   }
 //endregion events
 
