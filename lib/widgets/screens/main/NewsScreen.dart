@@ -12,19 +12,7 @@ class NewsScreen extends StatelessWidget {
   const NewsScreen({Key key, this.items}) : super(key: key);
 
   final List<ListItem> items;
-
-  static List<ListItem> _generateMocksList() {
-    return new List<ListItem>.generate(
-      15,
-      (i) => new NewsArticleItem(new NewsArticle(
-          "Publico Kitchen & Tap Now Open in Midtown",
-          "Midtown, Atlanta just got a trendy, new restaurant off of Crescent Street! Publico Kitchen & Tap is now open in the old Front Page News Spot.",
-          "https://georgiaonmydime.com/wp-content/uploads/2018/06/Publico-Atlanta-372x240.jpg",
-          "https://georgiaonmydime.com/publico-kitchen-tap-now-open-in-midtown/",
-          "April 23, 2018")),
-    );
-  }
-
+  
   List<ListItem> buildList(List<Post> posts) {
     return new List<ListItem>.generate(
       posts.length,
@@ -39,7 +27,7 @@ class NewsScreen extends StatelessWidget {
 
   FutureBuilder<List<Post>> buildPostsFromServer() {
     return FutureBuilder<List<Post>>(
-      future: APIReceiver.posts(http.Client()),
+      future: APIReceiver.news(http.Client()),
       builder: (context, snapshot) {
         if (snapshot.hasError) print(snapshot.error);
 
