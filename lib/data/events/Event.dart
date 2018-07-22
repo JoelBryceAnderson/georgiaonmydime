@@ -1,4 +1,5 @@
 import 'package:georgiaonmydime/data/events/EventVenue.dart';
+import 'package:georgiaonmydime/data/remote/RemoteEvent.dart';
 
 // UI Object for Event
 class Event {
@@ -25,17 +26,18 @@ class Event {
       this.tags,
       this.eventVenue);
 
-  factory Event.fromJson(Map<String, dynamic> json) {
+  factory Event.fromRemote(RemoteEvent remote) {
+    //todo
     return Event(
-      json['title'] as String,
-      json['description'] as String,
-      json['imageUrl'] as String,
-      json['eventUrl'] as String,
-      json['directions'] as String,
-      json['date'] as String,
-      json['time'] as String,
-      json['category'] as String,
-      json['tags'] as List<String>,
+      remote.published,
+      remote.published,
+      remote.published,
+      remote.published,
+      remote.published,
+      remote.published,
+      remote.published,
+      remote.published,
+      new List(),
       EventVenue("", "", ""),
     );
   }

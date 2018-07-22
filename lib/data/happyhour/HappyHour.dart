@@ -1,5 +1,6 @@
 import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
 import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
+import 'package:georgiaonmydime/data/remote/RemoteHappyHour.dart';
 import 'package:latlong/latlong.dart';
 
 // UI Object for HappyHour
@@ -26,16 +27,17 @@ class HappyHour {
       this.latLng,
       this.saved);
 
-  factory HappyHour.fromJson(Map<String, dynamic> json) {
+  factory HappyHour.fromRemote(RemoteHappyHour remote) {
+    //todo
     return HappyHour(
         Weekday.monday,
-        json['title'] as String,
-        json['description'] as String,
-        json['happyHourUrl'] as String,
-        json['imageUrl'] as String,
-        json['neighborhood'] as String,
-        json['openStatus'] as OpenStatus,
-        json['latLng'] as LatLng,
+        remote.published,
+        remote.published,
+        remote.published,
+        remote.published,
+        remote.published,
+        OpenStatus.open,
+        new LatLng(0.0, 0.0),
         false);
   }
 }
