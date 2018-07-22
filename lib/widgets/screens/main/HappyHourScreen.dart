@@ -3,10 +3,13 @@ import 'package:georgiaonmydime/data/ListItem.dart';
 import 'package:georgiaonmydime/data/happyhour/HappyHour.dart';
 import 'package:georgiaonmydime/data/happyhour/OpenStatus.dart';
 import 'package:georgiaonmydime/data/happyhour/Weekday.dart';
+import 'package:georgiaonmydime/data/remote/RemoteHappyHour.dart';
+import 'package:georgiaonmydime/network/APIReceiver.dart';
 import 'package:georgiaonmydime/theme/GeorgiaColors.dart';
-import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:georgiaonmydime/widgets/lists/CardList.dart';
+import 'package:georgiaonmydime/widgets/navigation/AppBarBottom.dart';
 import 'package:georgiaonmydime/widgets/navigation/MenuAction.dart';
+import 'package:http/http.dart' as http;
 import 'package:latlong/latlong.dart';
 
 class HappyHourScreen extends StatelessWidget {
@@ -32,6 +35,36 @@ class HappyHourScreen extends StatelessWidget {
     );
   }
 
+  List<ListItem> buildList(List<RemoteHappyHour> posts) {
+    return new List<ListItem>.generate(
+      posts.length,
+      (i) => new HappyHourItem(new HappyHour(
+          Weekday.monday,
+          posts[i].title,
+          posts[i].description,
+          posts[i].articleUrl,
+          "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
+          "Midtown",
+          i % 2 == 0 ? OpenStatus.open : OpenStatus.closed,
+          new LatLng(33.7723, -84.3793),
+          i % 2 == 0)),
+    );
+  }
+
+  FutureBuilder<List<RemoteHappyHour>> buildPostsFromServer() {
+    return FutureBuilder<List<RemoteHappyHour>>(
+      future: APIReceiver.happyHours(http.Client()),
+      builder: (context, snapshot) {
+        if (snapshot.hasError) print(snapshot.error);
+
+        return snapshot.hasData
+            ? CardList(items: buildList(snapshot.data))
+            : SliverFillRemaining(
+                child: new Center(child: new CircularProgressIndicator()));
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return new CustomScrollView(slivers: <Widget>[
@@ -47,7 +80,7 @@ class HappyHourScreen extends StatelessWidget {
           title: new ImageIcon(new AssetImage("assets/gomd_title.png"),
               size: 184.0, color: Colors.white),
           flexibleSpace: new FlexibleSpaceBar(background: new AppBarBottom())),
-      CardList(items: _generateMocksList())
+      buildPostsFromServer()
     ]);
   }
 }

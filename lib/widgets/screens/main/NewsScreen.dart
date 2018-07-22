@@ -19,7 +19,7 @@ class NewsScreen extends StatelessWidget {
       (i) => new NewsArticleItem(new NewsArticle(
           posts[i].title,
           posts[i].description,
-          posts[i].imageUrl,
+          "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
           posts[i].articleUrl,
           posts[i].published)),
     );

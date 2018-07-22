@@ -11,8 +11,8 @@ class Post {
 
   factory Post.fromJson(Map<String, dynamic> json) {
     return Post(
-        json['slug'] as String,
-        json['link'] as String,
+        (json['title'] as Map<String, dynamic>)['rendered'] as String,
+        (json['excerpt'] as Map<String, dynamic>)['rendered'] as String,
         json['type'] as String,
         json['link'] as String,
         json['date'] as String);

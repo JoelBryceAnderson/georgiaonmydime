@@ -11,10 +11,10 @@ class RemoteHappyHour {
 
   factory RemoteHappyHour.fromJson(Map<String, dynamic> json) {
     return RemoteHappyHour(
-        json['title'] as String,
-        json['description'] as String,
-        json['imageUrl'] as String,
-        json['articleUrl'] as String,
-        json['published'] as String);
+        (json['title'] as Map<String, dynamic>)['rendered'] as String,
+        json['link'] as String,
+        (json['title'] as Map<String, dynamic>)['rendered'] as String,
+        json['link'] as String,
+        json['date'] as String);
   }
 }
