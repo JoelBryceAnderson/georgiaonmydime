@@ -12,7 +12,7 @@ class NewsScreen extends StatelessWidget {
   const NewsScreen({Key key, this.items}) : super(key: key);
 
   final List<ListItem> items;
-  
+
   List<ListItem> buildList(List<Post> posts) {
     return new List<ListItem>.generate(
       posts.length,
@@ -33,7 +33,7 @@ class NewsScreen extends StatelessWidget {
 
         return snapshot.hasData
             ? CardList(items: buildList(snapshot.data))
-            : SliverFillRemaining(child: CircularProgressIndicator());
+            : SliverFillRemaining(child: new Center(child: new CircularProgressIndicator()));
       },
     );
   }

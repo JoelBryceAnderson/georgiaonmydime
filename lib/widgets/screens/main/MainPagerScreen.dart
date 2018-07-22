@@ -19,20 +19,9 @@ class _MainPagerScreenState extends State<MainPagerScreen>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: new Stack(
-        children: <Widget>[
-          _getProgress(),
-          _buildTransitionsStack(),
-        ],
-      ),
+      body: _buildTransitionsStack(),
       bottomNavigationBar: _buildBottomBar(),
     );
-  }
-
-  Widget _getProgress() {
-    return (!_isScreenShowing())
-        ? new Center(child: new CircularProgressIndicator())
-        : new Container();
   }
 
   Widget _buildTransitionsStack() {
