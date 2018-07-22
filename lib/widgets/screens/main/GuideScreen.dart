@@ -15,14 +15,7 @@ class GuideScreen extends StatelessWidget {
 
   List<ListItem> buildList(List<Post> posts) {
     return new List<ListItem>.generate(
-      posts.length,
-      (i) => new GuideItem(new Guide(
-          posts[i].title,
-          posts[i].description,
-          "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
-          posts[i].articleUrl,
-          posts[i].published)),
-    );
+        posts.length, (i) => new GuideItem(new Guide.fromRemote(posts[i])));
   }
 
   FutureBuilder<List<Post>> buildPostsFromServer() {

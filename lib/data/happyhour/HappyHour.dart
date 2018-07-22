@@ -31,11 +31,11 @@ class HappyHour {
     //todo
     return HappyHour(
         Weekday.monday,
-        remote.published,
-        remote.published,
-        remote.published,
-        remote.published,
-        remote.published,
+        remote.title,
+        remote.description,
+        remote.articleUrl,
+        "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
+        remote.title,
         OpenStatus.open,
         new LatLng(0.0, 0.0),
         false);

@@ -14,15 +14,8 @@ class NewsScreen extends StatelessWidget {
   final List<ListItem> items;
 
   List<ListItem> buildList(List<Post> posts) {
-    return new List<ListItem>.generate(
-      posts.length,
-      (i) => new NewsArticleItem(new NewsArticle(
-          posts[i].title,
-          posts[i].description,
-          "https://georgiaonmydime.com/wp-content/uploads/2018/05/Torched-Hop-Brewing-Company-550x420.jpg",
-          posts[i].articleUrl,
-          posts[i].published)),
-    );
+    return new List<ListItem>.generate(posts.length,
+        (i) => new NewsArticleItem(new NewsArticle.fromRemote(posts[i])));
   }
 
   FutureBuilder<List<Post>> buildPostsFromServer() {
@@ -33,7 +26,8 @@ class NewsScreen extends StatelessWidget {
 
         return snapshot.hasData
             ? CardList(items: buildList(snapshot.data))
-            : SliverFillRemaining(child: new Center(child: new CircularProgressIndicator()));
+            : SliverFillRemaining(
+                child: new Center(child: new CircularProgressIndicator()));
       },
     );
   }
